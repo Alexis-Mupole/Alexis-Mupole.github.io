@@ -1,0 +1,167 @@
+{
+  "services": [
+    {
+      "id": "web-cms-engineering",
+      "icon": "Code",
+      "title": {
+        "en": "Web & CMS Engineering",
+        "fr": "Ingénierie Web & CMS",
+        "sw": "Uhandisi wa Wavuti na CMS"
+      },
+      "description": {
+        "en": "Development of dynamic platforms and custom Content Management Systems (CMS) designed for high performance.",
+        "fr": "Développement de plateformes dynamiques et de systèmes de gestion de contenu (CMS) sur mesure conçus pour la performance.",
+        "sw": "Uendelezaji wa majukwaa yanayobadilika na mifumo ya usimamizi wa maudhui (CMS) iliyoundwa kwa utendaji wa juu."
+      },
+      "features": {
+        "en": ["Full-Stack Solutions", "Custom CMS", "Dynamic Dashboards", "Scalable Architecture"],
+        "fr": ["Solutions Full-Stack", "CMS Personnalisés", "Tableaux de bord dynamiques", "Architecture évolutive"],
+        "sw": ["Suluhisho za Full-Stack", "CMS Maalum", "Dashibodi zinazobadilika", "Muundo unaoweza kupanuka"]
+      },
+      "color": "blue"
+    },
+    {
+      "id": "data-kobo-odk-expert",
+      "icon": "Database",
+      "title": {
+        "en": "Data Expertise (Kobo/ODK)",
+        "fr": "Expertise Data (Kobo/ODK)",
+        "sw": "Utaalamu wa Data (Kobo/ODK)"
+      },
+      "description": {
+        "en": "Digitalization of surveys and mobile data collection optimized for humanitarian and research sectors.",
+        "fr": "Digitalisation des enquêtes et collecte de données mobiles optimisée pour les secteurs humanitaires et de recherche.",
+        "sw": "Uwekaji wa kidijitali wa tafiti na ukusanyaji wa data kwenye simu kwa ajili ya sekta za kibinadamu na utafiti."
+      },
+      "features": {
+        "en": ["Kobo Collect setup", "ODK Integration", "Offline data capture", "Real-time Analytics"],
+        "fr": ["Configuration Kobo Collect", "Intégration ODK", "Saisie hors-ligne", "Analytique temps réel"],
+        "sw": ["Usanidi wa Kobo Collect", "Muunganisho wa ODK", "Uingizaji data nje ya mtandao", "Uchambuzi wa wakati halisi"]
+      },
+      "color": "amber"
+    },
+    {
+      "id": "installation-systems",
+      "icon": "Settings",
+      "title": {
+        "en": "Installation & Systems",
+        "fr": "Installation & Systèmes",
+        "sw": "Usakinishaji na Mifumo"
+      },
+      "description": {
+        "en": "Professional deployment of operating systems, hardware maintenance, and critical technical support.",
+        "fr": "Déploiement professionnel de systèmes d'exploitation, maintenance hardware et support technique critique.",
+        "sw": "Usambazaji wa kitaalamu wa mifumo ya uendeshaji, matengenezo ya vifaa, na usaidizi muhimu wa kiufundi."
+      },
+      "features": {
+        "en": ["OS Deployment", "Hardware Maintenance", "System Optimization", "Troubleshooting"],
+        "fr": ["Déploiement d'OS", "Maintenance Hardware", "Optimisation Système", "Dépannage"],
+        "sw": ["Usambazaji wa OS", "Matengenezo ya Vifaa", "Uboreshaji wa Mfumo", "Utatuzi wa matatizo"]
+      },
+      "color": "sky"
+    },
+    {
+      "id": "infrastructure-networking",
+      "icon": "Wifi",
+      "title": {
+        "en": "Infrastructure & Networks",
+        "fr": "Infrastructure & Réseaux",
+        "sw": "Miundombinu na Mitandao"
+      },
+      "description": {
+        "en": "Configuration and maintenance of local network infrastructures using Cisco standards.",
+        "fr": "Configuration et maintenance d'infrastructures réseaux locaux selon les standards Cisco.",
+        "sw": "Usanidi na matengenezo ya miundombinu ya mtandao wa ndani kwa kutumia viwango vya Cisco."
+      },
+      "features": {
+        "en": ["Cisco Networking", "WiFi Optimization", "LAN/WAN Setup", "Network Security"],
+        "fr": ["Réseaux Cisco", "Optimisation WiFi", "Installation LAN/WAN", "Sécurisation réseau"],
+        "sw": ["Mitandao ya Cisco", "Uboreshaji wa WiFi", "Usanidi wa LAN/WAN", "Usalama wa Mtandao"]
+      },
+      "color": "indigo"
+    },
+    {
+      "id": "cybersecurity-digital-awareness",
+      "icon": "Shield",
+      "title": {
+        "en": "Cybersecurity & Awareness",
+        "fr": "Cybersécurité & Audit",
+        "sw": "Usalama wa Mtandao na Ukaguzi"
+      },
+      "description": {
+        "en": "Vulnerability assessment, data protection, and Digital Awareness training for users.",
+        "fr": "Évaluation des vulnérabilités, protection des données et formation à la sensibilisation numérique.",
+        "sw": "Tathmini ya udhaifu, ulinzi wa data, na mafunzo ya uelewa wa kidijitali kwa watumiaji."
+      },
+      "features": {
+        "en": ["Security Audits", "Data Protection", "Digital Awareness", "Malware Removal"],
+        "fr": ["Audits de sécurité", "Protection des données", "Sensibilisation numérique", "Nettoyage Malware"],
+        "sw": ["Ukaguzi wa Usalama", "Ulinzi wa Data", "Uelewa wa Kidijitali", "Kuondoa Malware"]
+      },
+      "color": "green"
+    },
+    {
+      "id": "office-automation-365",
+      "icon": "FileText",
+      "title": {
+        "en": "Advanced Office (365)",
+        "fr": "Bureautique Avancée (MS 365)",
+        "sw": "Otomatiki ya Ofisi (MS 365)"
+      },
+      "description": {
+        "en": "Advanced Excel automation, business reporting, and data modeling for efficient workflows.",
+        "fr": "Automatisation Excel avancée, reporting business et modélisation de données pour des flux efficaces.",
+        "sw": "Otomatiki ya Excel, ripoti za biashara, na uundaji wa data kwa ajili ya mtiririko bora wa kazi."
+      },
+      "features": {
+        "en": ["Excel Automation", "Business Intelligence", "Data Modeling", "Workflow efficiency"],
+        "fr": ["Automatisation Excel", "Business Intelligence", "Modélisation de données", "Efficacité des flux"],
+        "sw": ["Otomatiki ya Excel", "Akili ya Biashara", "Uundaji wa Data", "Ufanisi wa mtiririko"]
+      },
+      "color": "rose"
+    }
+  ],
+  "process": {
+    "en": [
+      { "title": "Audit & Discovery", "description": "Analyzing technical requirements and business objectives." },
+      { "title": "Strategic Design", "description": "Architecting custom solutions based on dual IT-Business expertise." },
+      { "title": "Professional Setup", "description": "Rigorous development and secure system installation." },
+      { "title": "Support & Growth", "description": "Ongoing maintenance and continuous skills transfer." }
+    ],
+    "fr": [
+      { "title": "Audit & Découverte", "description": "Analyse des besoins techniques et des objectifs business." },
+      { "title": "Conception Stratégique", "description": "Architecture de solutions basée sur la double expertise IT-Business." },
+      { "title": "Installation Pro", "description": "Développement rigoureux et installation sécurisée des systèmes." },
+      { "title": "Support & Croissance", "description": "Maintenance continue et transfert de compétences permanent." }
+    ],
+    "sw": [
+      { "title": "Ukaguzi na Utambuzi", "description": "Kuchambua mahitaji ya kiufundi na malengo ya biashara." },
+      { "title": "Ubuni wa Kimkakati", "description": "Kujenga suluhisho maalum kulingana na utaalamu wa IT na Biashara." },
+      { "title": "Usakinishaji wa Kitaalamu", "description": "Uendelezaji makini na usakinishaji salama wa mifumo." },
+      { "title": "Usaidizi na Ukuaji", "description": "Matengenezo endelevu na uhamishaji wa ujuzi wa mara kwa mara." }
+    ]
+  },
+  "whyChoose": {
+    "en": [
+      "BSc in Computer Science (USA) & Business Computing (Uganda)",
+      "Regional Expert focused on Goma-Kampala axis",
+      "Cisco Academy & HP IT for Business Certified",
+      "Life-long Learner dedicated to digital accessibility",
+      "Ethical Leadership and human-centered technology"
+    ],
+    "fr": [
+      "Licence en Computer Science (USA) & Business Computing (Ouganda)",
+      "Expert régional focalisé sur l'axe Goma-Kampala",
+      "Certifié Cisco Academy & HP IT for Business",
+      "Engagement 'Life-long Learner' pour l'accessibilité",
+      "Leadership éthique et technologie centrée sur l'humain"
+    ],
+    "sw": [
+      "Shahada ya Sayansi ya Kompyuta (USA) na Kompyuta ya Biashara (Uganda)",
+      "Mtaalamu wa kikanda anayezingatia mhimili wa Goma-Kampala",
+      "Aliidhinishwa na Cisco Academy na HP IT for Business",
+      "Ahadi ya 'Life-long Learner' kwa upatikanaji wa kidijitali",
+      "Uongozi wa kimaadili na teknolojia inayomlenga binadamu"
+    ]
+  }
+}

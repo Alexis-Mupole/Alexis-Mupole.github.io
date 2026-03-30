@@ -1,0 +1,156 @@
+{
+  "projects": [
+    {
+      "id": "portfolio",
+      "title": {
+        "en": "Personal Portfolio Website",
+        "fr": "Site Portfolio Personnel",
+        "sw": "Tovuti ya Portfolio ya Binadamu"
+      },
+      "description": {
+        "en": "Modern personal portfolio website built with React, TypeScript, and Tailwind CSS. Features responsive design, multi-language support, and smooth animations.",
+        "fr": "Site portfolio personnel moderne construit avec React, TypeScript et Tailwind CSS. Fonctionnalités包括设计 réactive, support multilingue et animations fluides.",
+        "sw": "Tovuti ya portfolio ya kisasa iliyojengwa kwa React, TypeScript, na Tailwind CSS. Ina vipengele vya muundo wa kujibu, usaidizi wa lugha nyingi, na animzioni laini."
+      },
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop",
+      "tags": ["React", "TypeScript", "Tailwind CSS", "Vite"],
+      "link": "https://github.com/Alexis-Mupole/portfolio",
+      "liveLink": "https://alexismupole.vercel.app",
+      "featured": true,
+      "language": "TypeScript"
+    },
+    {
+      "id": "trinity-pharmacy",
+      "title": {
+        "en": "Trinity Pharmacy Management",
+        "fr": "Gestion de Pharmacie Trinity",
+        "sw": "Usimamizi wa Pharmacy ya Trinity"
+      },
+      "description": {
+        "en": "Pharmacy management system for tracking medications, inventory, prescriptions, and customer records with real-time analytics.",
+        "fr": "Système de gestion de pharmacie pour le suivi des médicaments, inventaires, ordonnances et dossiers clients avec analytique en temps réel.",
+        "sw": "Mfumo wa usimamizi wa pharmacy kwa kufuatilia dawa, hesabu, mapokezo, na rekodi za wateja na uchambuzi wa wakati halisi."
+      },
+      "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop",
+      "tags": ["TypeScript", "React", "Node.js", "PostgreSQL"],
+      "link": "https://github.com/Alexis-Mupole/TrinityPharmacy",
+      "liveLink": null,
+      "featured": true,
+      "language": "TypeScript"
+    },
+    {
+      "id": "school-management",
+      "title": {
+        "en": "Secondary School Result Management System",
+        "fr": "Système de Gestion des Résultats du Lycée",
+        "sw": "Mfumo wa Usimamizi wa Matokeo ya Shule"
+      },
+      "description": {
+        "en": "Comprehensive school management system for managing student records, grades, attendance, and generating academic reports.",
+        "fr": "Système complet de gestion scolaire pour la gestion des dossiers étudiants, des notes, de la présence et la génération de rapports académiques.",
+        "sw": "Mfumo kamili wa usimamizi wa shule kwa kusimamia rekodi za wanafunzi, alama, ushiriki, na kutoa ripoti za kitaaluma."
+      },
+      "image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&auto=format&fit=crop",
+      "tags": ["PHP", "MySQL", "HTML", "JavaScript"],
+      "link": "https://github.com/Alexis-Mupole/Secondary-School-Result-Management-System",
+      "liveLink": null,
+      "featured": true,
+      "language": "PHP"
+    },
+    {
+      "id": "ghostshare",
+      "title": {
+        "en": "GhostShare - File Sharing Platform",
+        "fr": "GhostShare - Plateforme de Partage de Fichiers",
+        "sw": "GhostShare - Jukwaa la Kushiriki Faili"
+      },
+      "description": {
+        "en": "Secure file sharing platform with encrypted transfers, expiration links, and cloud storage integration.",
+        "fr": "Plateforme sécurisée de partage de fichiers avec transferts chiffrés, liens d'expiration et intégration de stockage cloud.",
+        "sw": "Jukwaa salama la kushiriki faili kwa maelekezo salama, viungo vya muda, na uunganisho wa hifadhi ya wingu."
+      },
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
+      "tags": ["TypeScript", "React", "Node.js", "AWS"],
+      "link": "https://github.com/Alexis-Mupole/GhostShare",
+      "liveLink": null,
+      "featured": true,
+      "language": "TypeScript"
+    },
+    {
+      "id": "department-website",
+      "title": {
+        "en": "Department of Computing Website",
+        "fr": "Site du Département d'Informatique",
+        "sw": "Tovuti ya Idara ya Kompyuta"
+      },
+      "description": {
+        "en": "Official department website for the Department of Computing and Technology with course information, news, and faculty profiles.",
+        "fr": "Site officiel du département d'informatique et technologie avec informations sur les cours, nouvelles et profils des enseignants.",
+        "sw": "Tovuti rasmi ya idara ya Kompyuta na Teknolojia na maelezo ya kozi, habari, na wasifu wa walimu."
+      },
+      "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&auto=format&fit=crop",
+      "tags": ["HTML", "CSS", "JavaScript"],
+      "link": "https://github.com/Alexis-Mupole/department-website",
+      "liveLink": null,
+      "featured": false,
+      "language": "HTML"
+    },
+    {
+      "id": "traveler",
+      "title": {
+        "en": "Traveler - Travel Agency Platform",
+        "fr": "Traveler - Plateforme d'Agence de Voyage",
+        "sw": "Traveler - Jukwaa la Shirika la Safari"
+      },
+      "description": {
+        "en": "Travel agency booking platform with package management, booking system, and payment integration.",
+        "fr": "Plateforme de réservation d'agence de voyages avec gestion des forfaits, système de réservation et intégration de paiement.",
+        "sw": "Jukwaa la kuhifadhi ya shirika la safari na usimamizi wa kifurushi, mfumo wa kuhifadhi, na uunganisho wa malipo."
+      },
+      "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&auto=format&fit=crop",
+      "tags": ["PHP", "MySQL", "HTML", "JavaScript"],
+      "link": "https://github.com/Alexis-Mupole/Traveler",
+      "liveLink": null,
+      "featured": false,
+      "language": "PHP"
+    },
+    {
+      "id": "sani-ai",
+      "title": {
+        "en": "SANI-AI - AI Prototype",
+        "fr": "SANI-AI - Prototype IA",
+        "sw": "SANI-AI - Prototaipe wa AI"
+      },
+      "description": {
+        "en": "AI prototype for Dragon's pitch - showcasing machine learning capabilities and natural language processing features.",
+        "fr": "Prototype IA pour Dragon's pitch - présentant les capacités d'apprentissage automatique et les fonctionnalités de traitement du langage naturel.",
+        "sw": "Prototaipe ya AI kwa ajili ya Dragon's pitch - kuonyeshwa uwezo wa kujifunza mashine na vipengele vya usindikaji lugha ya asili."
+      },
+      "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop",
+      "tags": ["HTML", "JavaScript", "Python", "AI"],
+      "link": "https://github.com/Alexis-Mupole/SANI-AI",
+      "liveLink": null,
+      "featured": false,
+      "language": "HTML"
+    },
+    {
+      "id": "soma-agent",
+      "title": {
+        "en": "SOMA-Agent",
+        "fr": "SOMA-Agent",
+        "sw": "SOMA-Agent"
+      },
+      "description": {
+        "en": "Agent-based system for task automation and workflow management with intelligent routing capabilities.",
+        "fr": "Système basé sur l'agent pour l'automatisation des tâches et la gestion des flux de travail avec capacités de routage intelligentes.",
+        "sw": "Mfumo wa msingi wa wakala kwa otomatiki ya kazi na usimamizi wa mtiririko wa kazi na uwezo wa routing wa akili."
+      },
+      "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format&fit=crop",
+      "tags": ["TypeScript", "React", "Node.js"],
+      "link": "https://github.com/Alexis-Mupole/SOMA-AGENT",
+      "liveLink": null,
+      "featured": false,
+      "language": "TypeScript"
+    }
+  ]
+}
