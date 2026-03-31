@@ -64,7 +64,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
             </div>
             <div className="flex flex-col items-start leading-none">
               <span className="text-base font-bold text-slate-900">Alexis Mupole</span>
-              <span className="text-xs text-slate-500">Digital Consultant</span>
+              <span className="text-xs text-slate-500">Digital Professional</span>
             </div>
           </button>
 
