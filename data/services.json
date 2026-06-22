@@ -119,6 +119,26 @@
         "sw": ["Otomatiki ya Excel", "Akili ya Biashara", "Uundaji wa Data", "Ufanisi wa mtiririko"]
       },
       "color": "rose"
+    },
+    {
+      "id": "it-training-skills-transfer",
+      "icon": "GraduationCap",
+      "title": {
+        "en": "IT Training & Skills Transfer",
+        "fr": "Formation IT & Transfert de Compétences",
+        "sw": "Mafunzo ya IT na Uhamishaji wa Ujuzi"
+      },
+      "description": {
+        "en": "Hands-on training programs that empower individuals and teams with practical IT competencies. From digital literacy to advanced software development, I design tailored learning experiences that build real, applicable skills.",
+        "fr": "Programmes de formation pratiques pour autonomiser les individus et les équipes avec des compétences IT concrètes. De l'alphabétisation numérique au développement logiciel avancé, je conçois des expériences d'apprentissage sur mesure qui bâtissent de vraies compétences.",
+        "sw": "Programu za mafunzo za vitendo zinazowawezesha watu binafsi na timu kwa ujuzi wa IT unaotumika. Kutoka kusoma na kuandika kwa kidijitali hadi uendelezaji wa programu, ninabuni uzoefu wa kujifunza unaojenga ujuzi halisi na unaotumika."
+      },
+      "features": {
+        "en": ["Digital Literacy Basics", "Web Development Workshops", "Database & Data Skills", "Cybersecurity Awareness", "Microsoft 365 Productivity", "Custom Corporate Training"],
+        "fr": ["Bases de la Culture Numérique", "Ateliers de Développement Web", "Compétences en Bases de Données", "Sensibilisation à la Cybersécurité", "Productivité Microsoft 365", "Formation d'Entreprise sur Mesure"],
+        "sw": ["Misingi ya Kusoma na Kuandika kwa Kidijitali", "Warsha za Uendelezaji wa Wavuti", "Ujuzi wa Hifadhidata", "Uelewa wa Usalama wa Mtandao", "Tija ya Microsoft 365", "Mafunzo Maalum ya Biashara"]
+      },
+      "color": "violet"
     }
   ],
   "process": {

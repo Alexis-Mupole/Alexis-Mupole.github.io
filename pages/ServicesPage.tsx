@@ -1,12 +1,13 @@
 import React from 'react';
 import { useTranslation } from '../src/context/LanguageContext';
+import { Page } from '../App';
 import { 
-  Code, Database, Shield, Settings, Wifi, FileText,
+  Code, Database, Shield, Settings, Wifi, FileText, GraduationCap,
   ArrowRight, CheckCircle, Zap 
 } from 'lucide-react';
 
 interface ServicesPageProps {
-  onNavigate: (page: 'home' | 'services' | 'solutions' | 'projects' | 'pricing' | 'contact') => void;
+  onNavigate: (page: Page) => void;
 }
 
 const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
@@ -19,9 +20,10 @@ const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
     green: { bg: "bg-green-50", text: "text-green-600", border: "border-green-200" },
     amber: { bg: "bg-amber-50", text: "text-amber-600", border: "border-amber-200" },
     rose: { bg: "bg-rose-50", text: "text-rose-600", border: "border-rose-200" },
+    violet: { bg: "bg-violet-50", text: "text-violet-600", border: "border-violet-200" },
   };
 
-  const servicesKeys = ['web', 'data', 'installation', 'network', 'security', 'office'] as const;
+  const servicesKeys = ['web', 'data', 'installation', 'network', 'security', 'office', 'training'] as const;
 
   return (
     <div className="bg-slate-50 min-h-screen">
@@ -48,7 +50,7 @@ const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
                 title={t.services.items[key].title}
                 description={t.services.items[key].desc}
                 features={t.services.items[key].features}
-                colors={colorClasses[['blue', 'amber', 'sky', 'indigo', 'green', 'rose'][index]]}
+                colors={colorClasses[['blue', 'amber', 'sky', 'indigo', 'green', 'rose', 'violet'][index]]}
               />
             ))}
           </div>
@@ -115,7 +117,7 @@ const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
 };
 
 const ServiceIcon: React.FC<{ index: number }> = ({ index }) => {
-  const icons = [Code, Database, Settings, Wifi, Shield, FileText];
+  const icons = [Code, Database, Settings, Wifi, Shield, FileText, GraduationCap];
   const Icon = icons[index];
   return <Icon size={32} />;
 };

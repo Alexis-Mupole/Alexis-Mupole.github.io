@@ -3,7 +3,7 @@ import { Page } from '../App';
 import { useTranslation } from '../src/context/LanguageContext';
 import { 
   Code, Database, Settings, Wifi, Shield, FileSpreadsheet, 
-  CheckCircle, ArrowRight, Sparkles, Building, Landmark
+  CheckCircle, ArrowRight, Building, Landmark
 } from 'lucide-react';
 
 interface SolutionsAfriquePageProps {
@@ -74,51 +74,32 @@ const SolutionsAfriquePage: React.FC<SolutionsAfriquePageProps> = ({ onNavigate 
         </section>
       ))}
 
-      <section className="py-20 lg:py-24 bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900 text-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <div className="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center text-amber-400 mb-6">
-                <Sparkles size={28} />
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                {t.approach.difference.title}
-              </h2>
-              <p className="text-blue-200 text-lg mb-8">
-                {t.approach.difference.intro}
-              </p>
-              <div className="space-y-4">
-                {t.approach.difference.items.map((item: string, i: number) => (
-                  <div key={i} className="flex items-center gap-4">
-                    <div className="w-10 h-10 bg-amber-500/20 rounded-lg flex items-center justify-center">
-                      {i === 0 ? <Code size={20} className="text-amber-400" /> : <Landmark size={20} className="text-amber-400" />}
-                    </div>
-                    <span className="text-white font-medium">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-amber-500 rounded-3xl blur-2xl opacity-30" />
-              <div className="relative bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
-                <div className="flex items-center gap-4 mb-6">
-                  <Building size={24} className="text-amber-400" />
-                  <span className="text-sm font-medium text-blue-200 uppercase tracking-wider">Background</span>
-                </div>
-                <blockquote className="text-xl md:text-2xl text-white font-medium leading-relaxed mb-6">
-                  "{t.approach.difference.quote}"
-                </blockquote>
+      <section className="py-20 lg:py-24 bg-gradient-to-br from-indigo-950 via-slate-900 to-violet-950 text-white relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-violet-600/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-amber-500/10 rounded-full blur-3xl" />
+        </div>
+        <div className="max-w-5xl mx-auto px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-amber-200 to-white bg-clip-text text-transparent">
+              {t.approach.difference.title}
+            </h2>
+            <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+              {t.approach.difference.intro}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-3xl mx-auto">
+            {t.approach.difference.items.map((item: string, i: number) => (
+              <div key={i} className="group bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 hover:border-amber-500/30 transition-all duration-300">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center text-white font-bold">
-                    AM
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-colors ${i === 0 ? 'bg-blue-500/20 text-blue-400 group-hover:bg-blue-500/30' : 'bg-amber-500/20 text-amber-400 group-hover:bg-amber-500/30'}`}>
+                    {i === 0 ? <Code size={22} /> : <Landmark size={22} />}
                   </div>
-                  <div>
-                    <p className="font-bold text-white">Alexis Mupole</p>
-                    <p className="text-sm text-blue-200">Digital Engineering Consultant</p>
-                  </div>
+                  <span className="text-white font-medium leading-snug">{item}</span>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

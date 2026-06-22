@@ -8,6 +8,8 @@ import SolutionsAfriquePage from './pages/SolutionsAfriquePage';
 import TarifsPage from './pages/TarifsPage';
 import ContactPage from './pages/ContactPage';
 import ProjectsPage from './pages/ProjectsPage';
+import PrivacyPage from './pages/PrivacyPage';
+import TermsPage from './pages/TermsPage';
 import { LanguageProvider } from './src/context/LanguageContext';
 import { MessageCircle } from 'lucide-react';
 
@@ -47,7 +49,7 @@ class ErrorBoundary extends React.Component<{ children: React.ReactNode }, { has
   }
 }
 
-export type Page = 'home' | 'services' | 'solutions' | 'projects' | 'pricing' | 'contact';
+export type Page = 'home' | 'services' | 'solutions' | 'projects' | 'pricing' | 'contact' | 'privacy' | 'terms';
 
 const WhatsAppButton: React.FC = () => {
   return (
@@ -63,8 +65,25 @@ const WhatsAppButton: React.FC = () => {
   );
 };
 
+const pageFromHash = (): Page => {
+  const hash = window.location.hash.replace('#', '') as Page;
+  const valid: Page[] = ['home', 'services', 'solutions', 'projects', 'pricing', 'contact', 'privacy', 'terms'];
+  return valid.includes(hash) ? hash : 'home';
+};
+
 const AppContent: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState<Page>('home');
+  const [currentPage, setCurrentPage] = useState<Page>(pageFromHash);
+
+  const navigate = (page: Page) => {
+    setCurrentPage(page);
+    window.location.hash = page === 'home' ? '' : page;
+  };
+
+  useEffect(() => {
+    const onHashChange = () => setCurrentPage(pageFromHash());
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, []);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -73,29 +92,33 @@ const AppContent: React.FC = () => {
   const renderPage = () => {
     switch (currentPage) {
       case 'home':
-        return <Home onNavigate={setCurrentPage} />;
+        return <Home onNavigate={navigate} />;
       case 'services':
-        return <ServicesPage onNavigate={setCurrentPage} />;
+        return <ServicesPage onNavigate={navigate} />;
       case 'solutions':
-        return <SolutionsAfriquePage onNavigate={setCurrentPage} />;
+        return <SolutionsAfriquePage onNavigate={navigate} />;
       case 'projects':
         return <ProjectsPage />;
       case 'pricing':
-        return <TarifsPage onNavigate={setCurrentPage} />;
+        return <TarifsPage onNavigate={navigate} />;
       case 'contact':
         return <ContactPage />;
+      case 'privacy':
+        return <PrivacyPage onNavigate={navigate} />;
+      case 'terms':
+        return <TermsPage onNavigate={navigate} />;
       default:
-        return <Home onNavigate={setCurrentPage} />;
+        return <Home onNavigate={navigate} />;
     }
   };
 
   return (
     <div className="min-h-screen flex flex-col bg-white overflow-x-hidden">
-      <Navbar currentPage={currentPage} onNavigate={setCurrentPage} />
+      <Navbar currentPage={currentPage} onNavigate={navigate} />
       <main className="flex-grow">
         {renderPage()}
       </main>
-      <Footer onNavigate={setCurrentPage} />
+      <Footer onNavigate={navigate} />
       <WhatsAppButton />
     </div>
   );

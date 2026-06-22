@@ -156,19 +156,6 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
 
         </motion.div>
       </div>
-
-      <div className="border-t border-slate-100">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-8">
-          <p className="text-center text-slate-400 text-sm font-medium mb-6">{t.hero.technologiesTitle}</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-            {['Next.js', 'React', 'TypeScript', 'Node.js', 'AWS', 'Python', 'PostgreSQL', 'Docker'].map((tech) => (
-              <span key={tech} className="text-slate-600 font-semibold text-sm hover:text-blue-600 transition-colors cursor-default">
-                {tech}
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
     </section>
   );
 };

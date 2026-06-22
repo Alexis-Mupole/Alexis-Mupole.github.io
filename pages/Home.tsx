@@ -1,9 +1,10 @@
 import React from 'react';
 import Hero from '../components/Hero';
+import Skills from '../components/Skills';
 import Projects from '../components/Projects';
 import { Page } from '../App';
 import { useTranslation } from '../src/context/LanguageContext';
-import { ArrowRight, CheckCircle, Zap, Shield, Globe, Clock, Sparkles } from 'lucide-react';
+import { ArrowRight, Zap, Shield, Globe, Clock } from 'lucide-react';
 
 interface HomeProps {
   onNavigate: (page: Page) => void;
@@ -48,48 +49,36 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      <section className="py-24 lg:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <span className="text-blue-600 text-sm font-semibold uppercase tracking-wider mb-3 block">{t.home.aboutTitle}</span>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-                {t.home.aboutSubtitle}
-              </h2>
-              <p className="text-slate-600 text-lg leading-relaxed mb-8">
-                {t.home.aboutDesc}
-              </p>
-              <div className="flex gap-8 mb-8">
-                <StatCard number={t.home.stats.projectsNum} label={t.home.stats.projects} />
-                <StatCard number={t.home.stats.experienceNum} label={t.home.stats.experience} />
-              </div>
-              <button 
-                onClick={() => onNavigate('contact')}
-                className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition-all"
-              >
-                {t.services.getInTouch} <ArrowRight size={18} />
-              </button>
+      <Skills onNavigate={onNavigate} />
+
+      <section className="py-24 lg:py-32 bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-100/50 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-amber-50/50 rounded-full blur-3xl" />
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10">
+          <span className="text-blue-600 text-sm font-semibold uppercase tracking-wider mb-4 block">{t.home.aboutTitle}</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+            {t.home.aboutSubtitle}
+          </h2>
+          <p className="text-slate-600 text-lg leading-relaxed mb-12 max-w-3xl mx-auto">
+            {t.home.aboutDesc}
+          </p>
+          <div className="flex justify-center gap-12 md:gap-16 mb-12">
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-blue-600">{t.home.stats.projectsNum}</div>
+              <div className="text-sm text-slate-500 mt-1">{t.home.stats.projects}</div>
             </div>
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-amber-50 rounded-3xl" />
-              <div className="relative bg-white rounded-3xl p-8 shadow-xl border border-slate-100">
-                <div className="flex items-center gap-2 mb-6">
-                  <Sparkles className="text-blue-600" size={20} />
-                  <h4 className="text-lg font-bold text-slate-900">{t.home.whatIOfferTitle}</h4>
-                </div>
-                <ul className="space-y-4">
-                  {t.home.whatIOffer.map((item: string, i: number) => (
-                    <li key={i} className="flex items-center gap-3">
-                      <div className="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center shrink-0">
-                        <CheckCircle className="text-green-600" size={14} />
-                      </div>
-                      <span className="text-slate-700">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            <div className="w-px bg-slate-200" />
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-blue-600">{t.home.stats.experienceNum}</div>
+              <div className="text-sm text-slate-500 mt-1">{t.home.stats.experience}</div>
             </div>
           </div>
+          <button 
+            onClick={() => onNavigate('contact')}
+            className="inline-flex items-center gap-3 px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/25 hover:shadow-xl hover:shadow-blue-600/30 hover:-translate-y-0.5"
+          >
+            {t.services.getInTouch} <ArrowRight size={18} />
+          </button>
         </div>
       </section>
 

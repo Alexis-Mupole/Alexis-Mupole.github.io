@@ -12,7 +12,7 @@ export const translations = {
       ctaPrimary: 'Discuter de votre projet',
       ctaSecondary: 'Voir mes services',
       tagline: 'Informaticien & Développeur (Licence en Computer Science aux USA & Licence en Business Computing en Ouganda). Passionné par l\'accessibilité et la sécurité numérique.',
-      subtitle: 'Je conçois des solutions qui comblent le fossé entre la technologie complexe et l\'accessibilité humaine. Ma mission est de doter les entreprises africaines d\'une infrastructure numérique de classe mondiale.',
+      subtitle: 'Je suis un apprenant passionné, poursuivant des diplômes en Computer Science et en Business Computing. Mes intérêts académiques se situent à l\'intersection du développement logiciel, de la gestion des données et de la stratégie d\'entreprise. J\'aime créer des applications web fonctionnelles, travailler avec des bases de données et explorer comment l\'IA peut résoudre les défis quotidiens. Je suis engagé dans une croissance continue et l\'application de mes compétences techniques pour créer des solutions numériques significatives.',
       location: 'Kinshasa, RD Congo',
       experience: '5+ Années d\'Expérience',
       specialist: 'Développeur Web',
@@ -116,6 +116,11 @@ export const translations = {
           title: 'Bureautique Avancée (MS 365)',
           desc: 'Automatisation Excel avancée, reporting business et modélisation de données pour des flux efficaces.',
           features: ['Automatisation Excel', 'Business Intelligence', 'Modélisation de données', 'Efficacité des flux']
+        },
+        training: {
+          title: 'Formation IT & Transfert de Compétences',
+          desc: 'Programmes de formation pratiques pour autonomiser les individus et les équipes avec des compétences IT concrètes. De l\'alphabétisation numérique au développement logiciel avancé, je conçois des expériences d\'apprentissage sur mesure qui bâtissent de vraies compétences.',
+          features: ['Bases de la Culture Numérique', 'Ateliers de Développement Web', 'Compétences en Bases de Données', 'Sensibilisation à la Cybersécurité', 'Productivité Microsoft 365', 'Formation d\'Entreprise sur Mesure']
         }
       }
     },
@@ -237,7 +242,7 @@ export const translations = {
       ctaPrimary: 'Discuss your project',
       ctaSecondary: 'See my services',
       tagline: 'IT Professional & Developer (BSc Computer Science - USA & BSc Business Computing - Uganda). Passionate about digital accessibility and security.',
-      subtitle: 'I engineer solutions that bridge the gap between complex technology and human accessibility. My mission is to empower African businesses with world-class digital infrastructure.',
+      subtitle: 'I am a passionate lifelong learner currently pursuing degrees in both Computer Science and Business Computing. My academic interests lie at the intersection of software development, data management, and business strategy. I enjoy building functional web applications, working with databases, and exploring how AI can solve everyday challenges. I am committed to continuous growth and applying my technical skills to create meaningful digital solutions.',
       location: 'Kinshasa, DR Congo',
       experience: '5+ Years Experience',
       specialist: 'Web Developper',
@@ -341,6 +346,11 @@ export const translations = {
           title: 'Advanced Office (365)',
           desc: 'Advanced Excel automation, business reporting, and data modeling for efficient workflows.',
           features: ['Excel Automation', 'Business Intelligence', 'Data Modeling', 'Workflow efficiency']
+        },
+        training: {
+          title: 'IT Training & Skills Transfer',
+          desc: 'Hands-on training programs that empower individuals and teams with practical IT competencies. From digital literacy to advanced software development, I design tailored learning experiences that build real, applicable skills.',
+          features: ['Digital Literacy Basics', 'Web Development Workshops', 'Database & Data Skills', 'Cybersecurity Awareness', 'Microsoft 365 Productivity', 'Custom Corporate Training']
         }
       }
     },
@@ -462,7 +472,7 @@ export const translations = {
       ctaPrimary: 'Jadili mradi wako',
       ctaSecondary: 'Angalia huduma zangu',
       tagline: 'Mtaalamu wa Kompyuta na Msanidi Programu (Shahada ya Sayansi ya Kompyuta - USA na Shahada ya Biashara - Uganda). Mtangamano wa upatikanaji wa kidijitali na usalama.',
-      subtitle: 'Ninajenga suluhisho zinazobridisha pengo kati ya teknolojia changa na upatikanaji wa binadamu.',
+      subtitle: 'Mimi ni mwanafunzi mwenye shauku ya kujifunza maishani, ninayesomea digrii katika Sayansi ya Kompyuta na Kompyuta ya Biashara. Ninapenda kujenga programu za wavuti zinazofanya kazi, kufanya kazi na hifadhidata, na kuchunguza jinsi AI inavyoweza kutatua changamoto za kila siku. Nimejitolea kwa ukuaji endelevu na kutumia ujuzi wangu wa kiufundi kuunda suluhisho za kidijitali zenye maana.',
       location: 'Kinshasa, DR Congo',
       experience: 'Miaka 5+ ya U pengalaman',
       specialist: 'Mtaalamu wa Cloud na AI',
@@ -565,6 +575,11 @@ export const translations = {
           title: 'Otomatiki ya Ofisi (MS 365)',
           desc: 'Otomatiki ya Excel, ripoti za biashara, na uundaji wa data kwa ajili ya mtiririko bora wa kazi.',
           features: ['Otomatiki ya Excel', 'Akili ya Biashara', 'Uundaji wa Data', 'Ufanisi wa mtiririko']
+        },
+        training: {
+          title: 'Mafunzo ya IT na Uhamishaji wa Ujuzi',
+          desc: 'Programu za mafunzo za vitendo zinazowawezesha watu binafsi na timu kwa ujuzi wa IT unaotumika. Kutoka kusoma na kuandika kwa kidijitali hadi uendelezaji wa programu, ninabuni uzoefu wa kujifunza unaojenga ujuzi halisi na unaotumika.',
+          features: ['Misingi ya Kusoma na Kuandika kwa Kidijitali', 'Warsha za Uendelezaji wa Wavuti', 'Ujuzi wa Hifadhidata', 'Uelewa wa Usalama wa Mtandao', 'Tija ya Microsoft 365', 'Mafunzo Maalum ya Biashara']
         }
       }
     },

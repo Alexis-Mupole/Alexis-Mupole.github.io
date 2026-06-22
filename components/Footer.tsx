@@ -99,8 +99,8 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             © {currentYear} Alexis Mupole. {t.footer.copyright}
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-slate-500 hover:text-white text-sm transition-colors">{t.footer.privacy}</a>
-            <a href="#" className="text-slate-500 hover:text-white text-sm transition-colors">{t.footer.terms}</a>
+            <button onClick={() => onNavigate('privacy')} className="text-slate-500 hover:text-white text-sm transition-colors">{t.footer.privacy}</button>
+            <button onClick={() => onNavigate('terms')} className="text-slate-500 hover:text-white text-sm transition-colors">{t.footer.terms}</button>
           </div>
           <button 
             onClick={scrollToTop}
