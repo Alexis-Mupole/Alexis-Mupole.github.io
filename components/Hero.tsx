@@ -36,7 +36,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
   };
 
   return (
-    <section className="min-h-screen bg-white overflow-hidden relative">
+    <section className="min-h-screen bg-white dark:bg-slate-900 overflow-hidden relative">
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-blue-50 to-transparent rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-amber-50 to-transparent rounded-full blur-3xl -z-10" />
       
@@ -55,30 +55,30 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                 {t.hero.available}
               </div>
               
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 leading-[1.1] tracking-tight">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-white leading-[1.1] tracking-tight">
                 Alexis <span className="text-blue-600">Mupole</span>
               </h1>
-              <h2 className="text-xl md:text-2xl text-slate-600 font-medium mt-2">
+              <h2 className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 font-medium mt-2">
                 {t.hero.tagline}
               </h2>
             </motion.div>
 
             <motion.div variants={itemVariants} className="space-y-4 max-w-xl">
-              <p className="text-lg text-slate-700 leading-relaxed">
+              <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
                 {t.hero.subtitle}
               </p>
             </motion.div>
 
             <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
-              <div className="flex items-center gap-2 text-slate-600 bg-slate-50 px-4 py-2 rounded-lg">
+              <div className="flex items-center gap-2 text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-800 px-4 py-2 rounded-lg">
                 <MapPin size={16} className="text-blue-600" />
                 <span className="text-sm font-medium">{t.hero.location}</span>
               </div>
-              <div className="flex items-center gap-2 text-slate-600 bg-slate-50 px-4 py-2 rounded-lg">
+              <div className="flex items-center gap-2 text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-800 px-4 py-2 rounded-lg">
                 <Calendar size={16} className="text-blue-600" />
                 <span className="text-sm font-medium">{t.hero.experience}</span>
               </div>
-              <div className="flex items-center gap-2 text-slate-600 bg-slate-50 px-4 py-2 rounded-lg">
+              <div className="flex items-center gap-2 text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-800 px-4 py-2 rounded-lg">
                 <Award size={16} className="text-blue-600" />
                 <span className="text-sm font-medium">{t.hero.specialist}</span>
               </div>
@@ -94,7 +94,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
               </button>
               <button 
                 onClick={() => onNavigate('contact')}
-                className="inline-flex items-center gap-3 px-8 py-4 bg-white text-slate-700 font-semibold rounded-xl hover:bg-slate-50 transition-all shadow-lg shadow-slate-200/50 border border-slate-200 hover:-translate-y-0.5"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-semibold rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700 transition-all shadow-lg shadow-slate-200/50 dark:shadow-slate-900/50 border border-slate-200 dark:border-slate-700 hover:-translate-y-0.5"
               >
                 {t.hero.hireMe}
                 <MessageCircle size={18} />
@@ -106,7 +106,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                 href="https://linkedin.com/in/alexismupole" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-11 h-11 bg-slate-50 rounded-lg flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white transition-all"
+                className="w-11 h-11 bg-slate-50 dark:bg-slate-800 rounded-lg flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-blue-600 hover:text-white transition-all"
               >
                 <Linkedin size={18} />
               </a>
@@ -114,13 +114,13 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                 href="https://twitter.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-11 h-11 bg-slate-50 rounded-lg flex items-center justify-center text-slate-600 hover:bg-slate-900 hover:text-white transition-all"
+                className="w-11 h-11 bg-slate-50 dark:bg-slate-800 rounded-lg flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-900 hover:text-white transition-all"
               >
                 <Twitter size={18} />
               </a>
               <a 
                 href="mailto:alexismupole@gmail.com"
-                className="w-11 h-11 bg-slate-50 rounded-lg flex items-center justify-center text-slate-600 hover:bg-red-500 hover:text-white transition-all"
+                className="w-11 h-11 bg-slate-50 dark:bg-slate-800 rounded-lg flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-red-500 hover:text-white transition-all"
               >
                 <Mail size={18} />
               </a>

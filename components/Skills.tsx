@@ -116,7 +116,7 @@ const Skills: React.FC<SkillsProps> = ({ onNavigate }) => {
   };
 
   return (
-    <section className="py-24 lg:py-32 bg-white overflow-hidden">
+    <section className="py-24 lg:py-32 bg-white dark:bg-slate-900 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -127,7 +127,7 @@ const Skills: React.FC<SkillsProps> = ({ onNavigate }) => {
           <span className="text-blue-600 text-sm font-semibold uppercase tracking-wider mb-3 block">
             {t.home.stack}
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">
             {t.home.stackDesc}
           </h2>
         </motion.div>
@@ -145,15 +145,15 @@ const Skills: React.FC<SkillsProps> = ({ onNavigate }) => {
               <motion.div
                 key={category.title}
                 variants={itemVariants}
-                className="bg-white rounded-2xl border border-slate-200 p-8 hover:shadow-xl transition-shadow"
+                className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-700 p-8 hover:shadow-xl transition-shadow"
               >
                 <div className="flex items-center gap-4 mb-8">
                   <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${category.bgColor} flex items-center justify-center shadow-lg`}>
                     <IconComp size={22} className="text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-slate-900">{category.title}</h3>
-                    <p className="text-sm text-slate-500">{category.items.length} technologies</p>
+                    <h3 className="text-xl font-bold text-slate-900 dark:text-white">{category.title}</h3>
+                    <p className="text-sm text-slate-500 dark:text-slate-400">{category.items.length} technologies</p>
                   </div>
                 </div>
 
@@ -161,7 +161,7 @@ const Skills: React.FC<SkillsProps> = ({ onNavigate }) => {
                   {category.items.map((tech) => (
                     <div
                       key={tech.name}
-                      className={`group flex flex-col items-center gap-2 p-4 rounded-xl bg-slate-50 border border-slate-100 hover:${category.borderColor} hover:bg-white transition-all cursor-default`}
+                      className={`group flex flex-col items-center gap-2 p-4 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 hover:${category.borderColor} hover:bg-white dark:hover:bg-slate-800 transition-all cursor-default`}
                     >
                       {tech.icon ? (
                         <i className={`${tech.icon} text-3xl md:text-4xl transition-transform group-hover:scale-110`} />
@@ -172,7 +172,7 @@ const Skills: React.FC<SkillsProps> = ({ onNavigate }) => {
                           </svg>
                         </div>
                       )}
-                      <span className="text-xs font-semibold text-slate-700 text-center leading-tight">
+                      <span className="text-xs font-semibold text-slate-700 dark:text-slate-300 text-center leading-tight">
                         {tech.name}
                       </span>
                     </div>
@@ -189,7 +189,7 @@ const Skills: React.FC<SkillsProps> = ({ onNavigate }) => {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <p className="text-slate-600 mb-6 text-lg">
+          <p className="text-slate-600 dark:text-slate-300 mb-6 text-lg">
             Vous avez un projet en tête ? Discutons de la façon dont je peux vous aider.
           </p>
           <button

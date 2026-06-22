@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: "Times New Roman", Times, serif;
   --font-display: "Times New Roman", Times, serif;
@@ -15,8 +17,12 @@
 body {
   background-color: #ffffff;
   color: var(--brutal-black);
-  font-size: 14px; /* Base font size reduced */
+  font-size: 14px;
   font-family: "Times New Roman", Times, serif;
+}
+
+.dark body {
+  background-color: #0f172a;
 }
 
 @layer base {

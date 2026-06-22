@@ -11,6 +11,7 @@ import ProjectsPage from './pages/ProjectsPage';
 import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
 import { LanguageProvider } from './src/context/LanguageContext';
+import { ThemeProvider } from './src/context/ThemeContext';
 import { MessageCircle } from 'lucide-react';
 
 class ErrorBoundary extends React.Component<{ children: React.ReactNode }, { hasError: boolean }> {
@@ -113,7 +114,7 @@ const AppContent: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-white overflow-x-hidden">
+    <div className="min-h-screen flex flex-col bg-white dark:bg-slate-900 overflow-x-hidden">
       <Navbar currentPage={currentPage} onNavigate={navigate} />
       <main className="flex-grow">
         {renderPage()}
@@ -128,7 +129,9 @@ const App: React.FC = () => {
   return (
     <ErrorBoundary>
       <LanguageProvider>
-        <AppContent />
+        <ThemeProvider>
+          <AppContent />
+        </ThemeProvider>
       </LanguageProvider>
     </ErrorBoundary>
   );

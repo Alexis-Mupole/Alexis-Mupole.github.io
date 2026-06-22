@@ -16,7 +16,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   };
 
   return (
-    <footer className="bg-slate-900 text-white relative overflow-hidden">
+    <footer className="bg-slate-900 dark:bg-slate-950 text-white relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-blue-400 to-amber-500" />
       
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-20">
@@ -28,10 +28,10 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </div>
               <div>
                 <span className="text-xl font-bold">Alexis Mupole</span>
-                <p className="text-xs text-slate-400">{t.hero.tagline?.split('(')[0] || 'Digital Consultant'}</p>
+                <p className="text-xs text-slate-400 dark:text-slate-300">{t.hero.tagline?.split('(')[0] || 'Digital Consultant'}</p>
               </div>
             </div>
-            <p className="text-slate-400 text-sm leading-relaxed mb-6">
+            <p className="text-slate-400 dark:text-slate-300 text-sm leading-relaxed mb-6">
               {t.footer.about}
             </p>
             <div className="flex gap-3">
@@ -67,19 +67,19 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Mail className="text-blue-400 mt-0.5 shrink-0" size={18} />
-                <a href="mailto:alexismupole@gmail.com" className="text-slate-400 hover:text-white transition-colors text-sm">
+                <a href="mailto:alexismupole@gmail.com" className="text-slate-400 dark:text-slate-300 hover:text-white dark:hover:text-white transition-colors text-sm">
                   alexismupole@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="text-blue-400 mt-0.5 shrink-0" size={18} />
-                <a href="tel:+243997306308" className="text-slate-400 hover:text-white transition-colors text-sm">
+                <a href="tel:+243997306308" className="text-slate-400 dark:text-slate-300 hover:text-white dark:hover:text-white transition-colors text-sm">
                   +243 997 306 308
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="text-blue-400 mt-0.5 shrink-0" size={18} />
-                <span className="text-slate-400 text-sm">
+                <span className="text-slate-400 dark:text-slate-300 text-sm">
                   Kinshasa, DR Congo
                 </span>
               </li>
@@ -94,17 +94,17 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-slate-500 text-sm">
+        <div className="mt-16 pt-8 border-t border-slate-800 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-slate-500 dark:text-slate-400 text-sm">
             © {currentYear} Alexis Mupole. {t.footer.copyright}
           </p>
           <div className="flex gap-6">
-            <button onClick={() => onNavigate('privacy')} className="text-slate-500 hover:text-white text-sm transition-colors">{t.footer.privacy}</button>
-            <button onClick={() => onNavigate('terms')} className="text-slate-500 hover:text-white text-sm transition-colors">{t.footer.terms}</button>
+            <button onClick={() => onNavigate('privacy')} className="text-slate-500 dark:text-slate-400 hover:text-white dark:hover:text-white text-sm transition-colors">{t.footer.privacy}</button>
+            <button onClick={() => onNavigate('terms')} className="text-slate-500 dark:text-slate-400 hover:text-white dark:hover:text-white text-sm transition-colors">{t.footer.terms}</button>
           </div>
           <button 
             onClick={scrollToTop}
-            className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-white hover:bg-blue-600 transition-colors"
+            className="w-10 h-10 bg-slate-800 dark:bg-slate-800 rounded-lg flex items-center justify-center text-white hover:bg-blue-600 transition-colors"
           >
             <ArrowUp size={18} />
           </button>
@@ -117,7 +117,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 const FooterLink: React.FC<{ children: React.ReactNode; onClick: () => void }> = ({ children, onClick }) => (
   <button 
     onClick={onClick}
-    className="text-slate-400 hover:text-white transition-colors text-sm text-left"
+    className="text-slate-400 dark:text-slate-300 hover:text-white dark:hover:text-white transition-colors text-sm text-left"
   >
     {children}
   </button>
@@ -129,7 +129,7 @@ const SocialLink: React.FC<{ href: string; icon: React.ReactNode; label: string 
     target="_blank"
     rel="noopener noreferrer"
     aria-label={label}
-    className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white transition-all"
+    className="w-10 h-10 bg-slate-800 dark:bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 dark:text-slate-300 hover:bg-blue-600 hover:text-white transition-all"
   >
     {icon}
   </a>
