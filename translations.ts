@@ -23,7 +23,8 @@ export const translations = {
       available: 'Disponible pour Projets',
       viewWork: 'Voir Mes Réalisations',
       hireMe: 'Engagez-moi',
-      scheduleCall: 'Planifier un Appel'
+      scheduleCall: 'Planifier un Appel',
+      downloadCv: 'Télécharger mon CV'
     },
     home: {
       vision: 'Ma Philosophie',
@@ -253,7 +254,8 @@ export const translations = {
       available: 'Available for Projects',
       viewWork: 'View My Work',
       hireMe: 'Hire Me',
-      scheduleCall: 'Schedule a Call'
+      scheduleCall: 'Schedule a Call',
+      downloadCv: 'Download my CV'
     },
     home: {
       vision: 'My Philosophy',
@@ -483,7 +485,8 @@ export const translations = {
       available: 'Inapatikana kwa Miradi',
       viewWork: 'Angalia Kazi Zangu',
       hireMe: 'Niajiri',
-      scheduleCall: 'Panga Muujiza'
+      scheduleCall: 'Panga Muujiza',
+      downloadCv: 'Pakua CV yangu'
     },
     home: {
       vision: 'Falsafa Yangu',

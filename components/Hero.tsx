@@ -1,7 +1,7 @@
 import React from 'react';
 import { Page } from '../App';
 import { useTranslation } from '../src/context/LanguageContext';
-import { MessageCircle, Mail, Linkedin, Twitter, ArrowRight, MapPin, Calendar, Award, Check } from 'lucide-react';
+import { MessageCircle, Mail, Linkedin, Twitter, ArrowRight, MapPin, Calendar, Award, Check, Download } from 'lucide-react';
 import { motion } from 'framer-motion';
 import profileImage from '../images/alex.jpeg';
 
@@ -99,6 +99,14 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                 {t.hero.hireMe}
                 <MessageCircle size={18} />
               </button>
+              <a
+                href="./cv.pdf"
+                download
+                className="inline-flex items-center gap-3 px-8 py-4 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-semibold rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700 transition-all shadow-lg shadow-slate-200/50 dark:shadow-slate-900/50 border border-slate-200 dark:border-slate-700 hover:-translate-y-0.5"
+              >
+                <Download size={18} />
+                {t.hero.downloadCv}
+              </a>
             </motion.div>
 
             <motion.div variants={itemVariants} className="flex items-center gap-4 pt-2">
