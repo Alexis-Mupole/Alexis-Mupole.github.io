@@ -78,17 +78,17 @@ const AppContent: React.FC = () => {
   const navigate = (page: Page) => {
     setCurrentPage(page);
     window.location.hash = page === 'home' ? '' : page;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   useEffect(() => {
-    const onHashChange = () => setCurrentPage(pageFromHash());
+    const onHashChange = () => {
+      setCurrentPage(pageFromHash());
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
     window.addEventListener('hashchange', onHashChange);
     return () => window.removeEventListener('hashchange', onHashChange);
   }, []);
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [currentPage]);
 
   const renderPage = () => {
     switch (currentPage) {
