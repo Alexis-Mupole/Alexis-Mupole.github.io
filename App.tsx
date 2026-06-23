@@ -99,7 +99,7 @@ const AppContent: React.FC = () => {
       case 'solutions':
         return <SolutionsAfriquePage onNavigate={navigate} />;
       case 'projects':
-        return <ProjectsPage />;
+        return <ProjectsPage onNavigate={navigate} />;
       case 'pricing':
         return <TarifsPage onNavigate={navigate} />;
       case 'contact':
