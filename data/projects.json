@@ -1,6 +1,126 @@
 {
   "projects": [
     {
+      "id": "kivu-service-hub",
+      "title": {
+        "en": "Kivu Service Hub",
+        "fr": "Kivu Service Hub",
+        "sw": "Kivu Service Hub"
+      },
+      "description": {
+        "en": "Professional website for Kivu Service Hub, a trusted IT and web development partner delivering digital solutions and technical support to businesses in the Great Lakes region.",
+        "fr": "Site web professionnel de Kivu Service Hub, partenaire de confiance en informatique et développement web offrant des solutions numériques et un support technique aux entreprises de la région des Grands Lacs.",
+        "sw": "Tovuti ya kitaalamu ya Kivu Service Hub, mshirika wa IT na uendelezaji wa wavuti inayotoa suluhisho za kidijitali na usaidizi wa kiufundi kwa biashara za mkoa wa Maziwa Makuu."
+      },
+      "features": {
+        "en": ["Service catalog presentation", "Company profile & expertise section", "Contact & quote request channels", "Responsive multi-device design"],
+        "fr": ["Présentation du catalogue de services", "Profil d'entreprise et section expertise", "Canaux de contact et demande de devis", "Design responsive multi-appareils"],
+        "sw": ["Uwasilishaji wa katalogi ya huduma", "Wasifu wa kampuni na sehemu ya utaalamu", "Njia za mawasiliano na ombi la bei", "Muundo unaojibu kwa vifaa vyote"]
+      },
+      "image": "images/projects/kivu-service-hub.jpg",
+      "tags": ["Web Development", "IT Services", "Business Website"],
+      "link": null,
+      "liveLink": "https://kivuservicehub.com",
+      "featured": true,
+      "language": "TypeScript"
+    },
+    {
+      "id": "nkokwe-digital-solutions",
+      "title": {
+        "en": "Nkokwe Digital Solutions",
+        "fr": "Nkokwe Digital Solutions",
+        "sw": "Nkokwe Digital Solutions"
+      },
+      "description": {
+        "en": "Website for Nkokwe Digital Solutions, a Kinshasa-based digital agency offering web development, mobile applications, digital marketing, and cybersecurity services across the DRC.",
+        "fr": "Site web de Nkokwe Digital Solutions, agence digitale basée à Kinshasa offrant des services de développement web, d'applications mobiles, de marketing digital et de cybersécurité en RDC.",
+        "sw": "Tovuti ya Nkokwe Digital Solutions, shirika la kidijitali lililoko Kinshasa linalotoa huduma za uendelezaji wa wavuti, programu za simu, uuzaji wa kidijitali na usalama wa mtandao nchini DRC."
+      },
+      "features": {
+        "en": ["Full services overview (web, mobile, marketing, security)", "Pricing section", "News & blog area", "FAQ section", "WhatsApp & contact integration"],
+        "fr": ["Vue d'ensemble des services (web, mobile, marketing, sécurité)", "Section tarifs", "Espace actualités & blog", "Section FAQ", "Intégration WhatsApp et contact"],
+        "sw": ["Muhtasari wa huduma kamili (wavuti, simu, usokoaji, usalama)", "Sehemu ya bei", "Eneo la habari na blogu", "Sehemu ya FAQ", "Uunganishaji wa WhatsApp na mawasiliano"]
+      },
+      "image": "images/projects/nkokwe-digital-solutions.jpg",
+      "tags": ["Digital Agency", "Corporate Website", "Responsive Design"],
+      "link": null,
+      "liveLink": "https://nkokwedigsol.net",
+      "featured": true,
+      "language": "TypeScript"
+    },
+    {
+      "id": "mandella-international",
+      "title": {
+        "en": "Mandella International",
+        "fr": "Mandella International",
+        "sw": "Mandella International"
+      },
+      "description": {
+        "en": "Official website for Mandella International French School, a Congolese international school based in Kampala, Uganda, showcasing its programs, admissions, and school life.",
+        "fr": "Site officiel de Mandella International French School, école internationale congolaise basée à Kampala (Ouganda), présentant ses programmes, ses admissions et la vie scolaire.",
+        "sw": "Tovuti rasmi ya Mandella International French School, shule ya kimataifa ya Kongo iliyoko Kampala, Uganda, inayoonyesha programu zake, uandikishaji na maisha ya shule."
+      },
+      "features": {
+        "en": ["School presentation (mission, vision, values)", "Programs & academics sections", "Admissions information", "Photo galleries & school life", "Contact channels for parents"],
+        "fr": ["Présentation de l'école (mission, vision, valeurs)", "Sections programmes et études", "Informations d'admission", "Galleries photos et vie scolaire", "Canaux de contact pour les parents"],
+        "sw": ["Wasilisho la shule (dhamira, maono, maadili)", "Sehemu za programu na masomo", "Taarifa za uandikishaji", "Matunzio ya picha na maisha ya shule", "Njia za mawasiliano kwa wazazi"]
+      },
+      "image": "images/projects/mandella-international.jpg",
+      "tags": ["Education", "School Website", "Multilingual"],
+      "link": null,
+      "liveLink": "https://www.mandellainternational.com",
+      "featured": true,
+      "language": "TypeScript"
+    },
+    {
+      "id": "johnnie-7-energy-plus",
+      "title": {
+        "en": "Johnnie 7 Energy Plus",
+        "fr": "Johnnie 7 Energy Plus",
+        "sw": "Johnnie 7 Energy Plus"
+      },
+      "description": {
+        "en": "Bold brand website for Johnnie 7 Energy Plus, a new-generation energy drink, designed to showcase the product and strengthen its market presence.",
+        "fr": "Site web percutant pour Johnnie 7 Energy Plus, une boisson énergisante de nouvelle génération, conçu pour mettre en valeur le produit et renforcer sa présence sur le marché.",
+        "sw": "Tovuti ya chapa ya Johnnie 7 Energy Plus, kinywaji cha nguvu cha kizazi kipya, iliyoundwa kuonyesha bidhaa na kuimarisha uwepo wake sokoni."
+      },
+      "features": {
+        "en": ["Bold product-focused landing experience", "Brand story & positioning", "Product highlights section", "Social media integration"],
+        "fr": ["Expérience d'accueil axée sur le produit", "Histoire et positionnement de la marque", "Section des points forts du produit", "Intégration des réseaux sociaux"],
+        "sw": ["Uzoefu wa ukurasa wa mwanzo unaolenga bidhaa", "Hadithi na nafasi ya chapa sokoni", "Sehemu ya vipengele muhimu vya bidhaa", "Uunganishaji wa mitandao ya kijamii"]
+      },
+      "image": "images/projects/johnnie-7-energy-plus.jpg",
+      "tags": ["Brand Website", "Product", "Marketing"],
+      "link": null,
+      "liveLink": "https://www.johnnie7energyplus.com",
+      "featured": true,
+      "language": "TypeScript"
+    },
+    {
+      "id": "ricca-kenya",
+      "title": {
+        "en": "RICCA Kenya",
+        "fr": "RICCA Kenya",
+        "sw": "RICCA Kenya"
+      },
+      "description": {
+        "en": "Website for RICCA Kenya (Rising Capacities for Children Africa), a nonprofit protecting and educating children in rural Kenya, featuring its programs, donation campaigns, and community impact stories.",
+        "fr": "Site web de RICCA Kenya (Rising Capacities for Children Africa), organisation à but non lucratif qui protège et éduque les enfants du Kenya rural, présentant ses programmes, ses campagnes de dons et son impact communautaire.",
+        "sw": "Tovuti ya RICCA Kenya (Rising Capacities for Children Africa), shirika lisilo la kifaida linalolinda na kuelimisha watoto vijijini mwa Kenya, linaloonyesha programu zake, kampeni za michango na athari zake kwa jamii."
+      },
+      "features": {
+        "en": ["Program showcase (Afterschool Centre, Fellowship, Digi Corner)", "Integrated donation campaigns with progress tracking", "Impact stories & testimonials", "Volunteer & contact channels", "Newsletter subscription"],
+        "fr": ["Vitrine des programmes (Afterschool Centre, Fellowship, Digi Corner)", "Campagnes de dons intégrées avec suivi de progression", "Histoires d'impact et témoignages", "Canaux de bénévolat et de contact", "Abonnement à la newsletter"],
+        "sw": ["Onyesho la programu (Afterschool Centre, Fellowship, Digi Corner)", "Kampeni za michango zilizojumuishwa na ufuatiliaji wa maendeleo", "Hadithi za athari na shuhuda", "Njia za kujitolea na mawasiliano", "Usajili wa jarida"]
+      },
+      "image": "images/projects/ricca-kenya.jpg",
+      "tags": ["Nonprofit", "Donation Campaigns", "Community Impact"],
+      "link": null,
+      "liveLink": "https://www.ricca-kenya.org/",
+      "featured": true,
+      "language": "PHP"
+    },
+    {
       "id": "portfolio",
       "title": {
         "en": "Personal Portfolio Website",
@@ -9,10 +129,15 @@
       },
       "description": {
         "en": "Modern personal portfolio website built with React, TypeScript, and Tailwind CSS. Features responsive design, multi-language support, and smooth animations.",
-        "fr": "Site portfolio personnel moderne construit avec React, TypeScript et Tailwind CSS. Fonctionnalités包括设计 réactive, support multilingue et animations fluides.",
+        "fr": "Site portfolio personnel moderne construit avec React, TypeScript et Tailwind CSS. Design réactif, support multilingue et animations fluides.",
         "sw": "Tovuti ya portfolio ya kisasa iliyojengwa kwa React, TypeScript, na Tailwind CSS. Ina vipengele vya muundo wa kujibu, usaidizi wa lugha nyingi, na animzioni laini."
       },
-      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop",
+      "features": {
+        "en": ["Multi-language support (EN/FR/SW)", "Dark mode", "Animated sections", "Contact form"],
+        "fr": ["Support multilingue (EN/FR/SW)", "Mode sombre", "Sections animées", "Formulaire de contact"],
+        "sw": ["Usaidizi wa lugha nyingi (EN/FR/SW)", "Hali ya giza", "Sehemu zenye animation", "Fomu ya mawasiliano"]
+      },
+      "image": "images/projects/portfolio.jpg",
       "tags": ["React", "TypeScript", "Tailwind CSS", "Vite"],
       "link": "https://github.com/Alexis-Mupole/portfolio",
       "liveLink": "https://alexismupole.vercel.app",
@@ -30,6 +155,11 @@
         "en": "Pharmacy management system for tracking medications, inventory, prescriptions, and customer records with real-time analytics.",
         "fr": "Système de gestion de pharmacie pour le suivi des médicaments, inventaires, ordonnances et dossiers clients avec analytique en temps réel.",
         "sw": "Mfumo wa usimamizi wa pharmacy kwa kufuatilia dawa, hesabu, mapokezo, na rekodi za wateja na uchambuzi wa wakati halisi."
+      },
+      "features": {
+        "en": ["Medication & inventory tracking", "Prescription management", "Customer records", "Real-time analytics dashboard"],
+        "fr": ["Suivi des médicaments et des stocks", "Gestion des ordonnances", "Dossiers clients", "Tableau de bord analytique en temps réel"],
+        "sw": ["Ufuatiliaji wa dawa na hesabu", "Usimamizi wa mapokezo", "Rekodi za wateja", "Dashibodi ya uchambuzi wa wakati halisi"]
       },
       "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop",
       "tags": ["TypeScript", "React", "Node.js", "PostgreSQL"],
@@ -50,6 +180,11 @@
         "fr": "Système complet de gestion scolaire pour la gestion des dossiers étudiants, des notes, de la présence et la génération de rapports académiques.",
         "sw": "Mfumo kamili wa usimamizi wa shule kwa kusimamia rekodi za wanafunzi, alama, ushiriki, na kutoa ripoti za kitaaluma."
       },
+      "features": {
+        "en": ["Student records management", "Grades & results processing", "Attendance tracking", "Academic report generation"],
+        "fr": ["Gestion des dossiers étudiants", "Traitement des notes et résultats", "Suivi de la présence", "Génération de rapports académiques"],
+        "sw": ["Usimamizi wa rekodi za wanafunzi", "Uchakataji wa alama na matokeo", "Ufuatiliaji wa mahudhurio", "Uzalishaji wa ripoti za kitaaluma"]
+      },
       "image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&auto=format&fit=crop",
       "tags": ["PHP", "MySQL", "HTML", "JavaScript"],
       "link": "https://github.com/Alexis-Mupole/Secondary-School-Result-Management-System",
@@ -68,6 +203,11 @@
         "en": "Secure file sharing platform with encrypted transfers, expiration links, and cloud storage integration.",
         "fr": "Plateforme sécurisée de partage de fichiers avec transferts chiffrés, liens d'expiration et intégration de stockage cloud.",
         "sw": "Jukwaa salama la kushiriki faili kwa maelekezo salama, viungo vya muda, na uunganisho wa hifadhi ya wingu."
+      },
+      "features": {
+        "en": ["Encrypted file transfers", "Expiring share links", "Cloud storage integration", "Download analytics"],
+        "fr": ["Transferts de fichiers chiffrés", "Liens de partage expirants", "Intégration de stockage cloud", "Analytique des téléchargements"],
+        "sw": ["Uhamishaji wa faili uliosimbwa", "Viungo vya kushiriki vinavyoisha", "Uunganishaji wa hifadhi ya wingu", "Uchambuzi wa kupakua"]
       },
       "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
       "tags": ["TypeScript", "React", "Node.js", "AWS"],
@@ -88,6 +228,11 @@
         "fr": "Site officiel du département d'informatique et technologie avec informations sur les cours, nouvelles et profils des enseignants.",
         "sw": "Tovuti rasmi ya idara ya Kompyuta na Teknolojia na maelezo ya kozi, habari, na wasifu wa walimu."
       },
+      "features": {
+        "en": ["Course & program catalog", "News & announcements", "Faculty profiles", "Student resources section"],
+        "fr": ["Catalogue des cours et programmes", "Nouvelles et annonces", "Profils des enseignants", "Section ressources étudiantes"],
+        "sw": ["Katalogi ya kozi na programu", "Habari na matangazo", "Wasifu wa walimu", "Sehemu ya nyenzo za wanafunzi"]
+      },
       "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&auto=format&fit=crop",
       "tags": ["HTML", "CSS", "JavaScript"],
       "link": "https://github.com/Alexis-Mupole/department-website",
@@ -106,6 +251,11 @@
         "en": "Travel agency booking platform with package management, booking system, and payment integration.",
         "fr": "Plateforme de réservation d'agence de voyages avec gestion des forfaits, système de réservation et intégration de paiement.",
         "sw": "Jukwaa la kuhifadhi ya shirika la safari na usimamizi wa kifurushi, mfumo wa kuhifadhi, na uunganisho wa malipo."
+      },
+      "features": {
+        "en": ["Travel package management", "Online booking system", "Payment integration", "Destination showcases"],
+        "fr": ["Gestion des forfaits voyage", "Système de réservation en ligne", "Intégration de paiement", "Présentation des destinations"],
+        "sw": ["Usimamizi wa vifurushi vya safari", "Mfumo wa kuweka nafasi mtandaoni", "Uunganishaji wa malipo", "Onyesho la vituo vya kutembelea"]
       },
       "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&auto=format&fit=crop",
       "tags": ["PHP", "MySQL", "HTML", "JavaScript"],
@@ -126,6 +276,11 @@
         "fr": "Prototype IA pour Dragon's pitch - présentant les capacités d'apprentissage automatique et les fonctionnalités de traitement du langage naturel.",
         "sw": "Prototaipe ya AI kwa ajili ya Dragon's pitch - kuonyeshwa uwezo wa kujifunza mashine na vipengele vya usindikaji lugha ya asili."
       },
+      "features": {
+        "en": ["Natural language interface prototype", "Machine learning demo capabilities", "Pitch-ready presentation design"],
+        "fr": ["Prototype d'interface en langage naturel", "Démonstration de capacités d'apprentissage automatique", "Conception de présentation pour pitch"],
+        "sw": ["Prototaipe ya kiolesura cha lugha asilia", "Uwezo wa onyesho la kujifunza mashine", "Muundo wa wasilisho kwa ajili ya pitch"]
+      },
       "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop",
       "tags": ["HTML", "JavaScript", "Python", "AI"],
       "link": "https://github.com/Alexis-Mupole/SANI-AI",
@@ -144,6 +299,11 @@
         "en": "Agent-based system for task automation and workflow management with intelligent routing capabilities.",
         "fr": "Système basé sur l'agent pour l'automatisation des tâches et la gestion des flux de travail avec capacités de routage intelligentes.",
         "sw": "Mfumo wa msingi wa wakala kwa otomatiki ya kazi na usimamizi wa mtiririko wa kazi na uwezo wa routing wa akili."
+      },
+      "features": {
+        "en": ["Task automation workflows", "Intelligent routing engine", "Agent-based architecture", "Workflow management dashboard"],
+        "fr": ["Automatisation des flux de tâches", "Moteur de routage intelligent", "Architecture basée sur des agents", "Tableau de bord de gestion des flux"],
+        "sw": ["Mtiririko wa otomatiki ya kazi", "Injini ya uelekezi mahiri", "Usanifu wa msingi wa wakala", "Dashibodi ya usimamizi wa mtiririko"]
       },
       "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format&fit=crop",
       "tags": ["TypeScript", "React", "Node.js"],

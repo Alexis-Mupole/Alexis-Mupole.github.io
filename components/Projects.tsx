@@ -52,6 +52,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
   const { lang } = useTranslation();
   const title = project.title[lang] || project.title.en;
   const description = project.description[lang] || project.description.en;
+  const detailsHash = `#project/${project.id}`;
 
   return (
     <motion.div
@@ -59,7 +60,8 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.1, duration: 0.5 }}
-      className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+      onClick={() => { window.location.hash = `project/${project.id}`; }}
+      className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
     >
       <div className="relative h-48 overflow-hidden">
         <img 
@@ -74,6 +76,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
               className="flex items-center gap-2 px-3 py-2 bg-white text-slate-900 rounded-lg text-sm font-medium hover:bg-slate-100 transition-colors"
             >
               <Github size={16} />
@@ -85,6 +88,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
               href={project.liveLink}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
               className="flex items-center gap-2 px-3 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
             >
               <ExternalLink size={16} />
@@ -124,12 +128,11 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
             )}
           </span>
           <a 
-            href={project.link || '#'}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={detailsHash}
+            onClick={(e) => e.stopPropagation()}
             className="flex items-center gap-1 text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors"
           >
-            View Project
+            View Details
             <ArrowUpRight size={16} />
           </a>
         </div>

@@ -4,9 +4,10 @@ declare module '*.json' {
       id: string;
       title: { en: string; fr: string; sw: string };
       description: { en: string; fr: string; sw: string };
+      features: { en: string[]; fr: string[]; sw: string[] };
       image: string;
       tags: string[];
-      link: string;
+      link: string | null;
       liveLink: string | null;
       featured: boolean;
     }>;

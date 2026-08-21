@@ -12,7 +12,7 @@ export const translations = {
       ctaPrimary: 'Discuter de votre projet',
       ctaSecondary: 'Voir mes services',
       tagline: 'Informaticien & Développeur (Licence en Computer Science aux USA & Licence en Business Computing en Ouganda). Passionné par l\'accessibilité et la sécurité numérique.',
-      subtitle: 'Je suis un apprenant passionné, poursuivant des diplômes en Computer Science et en Business Computing. Mes intérêts académiques se situent à l\'intersection du développement logiciel, de la gestion des données et de la stratégie d\'entreprise. J\'aime créer des applications web fonctionnelles, travailler avec des bases de données et explorer comment l\'IA peut résoudre les défis quotidiens. Je suis engagé dans une croissance continue et l\'application de mes compétences techniques pour créer des solutions numériques significatives.',
+      subtitle: 'Consultant en ingénierie numérique, j\'accompagne entreprises, ONG et particuliers avec plus de 5 ans d\'expérience terrain. Du développement d\'applications web sur mesure à la sécurisation de vos systèmes et à la collecte de données mobiles, je conçois des solutions fiables qui transforment vos défis techniques en résultats concrets.',
       location: 'Kinshasa, RD Congo',
       experience: '5+ Années d\'Expérience',
       specialist: 'Développeur Web',
@@ -43,7 +43,6 @@ export const translations = {
         rigor: { t: 'Mise en œuvre', d: 'Installation propre des systèmes et développement de code structuré et sécurisé.' },
         support: { t: 'Autonomie', d: 'Remise d\'un guide simple et formation rapide pour que vous soyez à l\'aise.' }
       },
-      stats: { projects: 'Projets Réalisés', experience: "Années d'Expérience" },
       whyChooseTitle: 'Pourquoi Me Choisir',
       whyChooseSubtitle: 'Livrer l\'Excellence dans Chaque Projet',
       whyChooseDesc: "Je combine expertise technique et sens des affaires pour deliver des solutions qui génèrent de vrais résultats.",
@@ -84,7 +83,7 @@ export const translations = {
         degree: "Licence en Computer Science (USA) & Business Computing (Ouganda)",
         regional: "Expert régional focalisé sur l'axe Goma-Kampala",
         certified: "Certifié Cisco Academy & HP IT for Business",
-        learner: "Engagement 'Life-long Learner' pour l'accessibilité",
+        learner: "Amélioration continue & veille technologique au service de l'accessibilité numérique",
         leadership: "Leadership éthique et technologie centrée sur l'humain"
       },
       items: {
@@ -182,6 +181,17 @@ export const translations = {
       step3: { t: 'Réalisation', d: 'Travail soigné et tests.' },
       step4: { t: 'Garantie', d: 'Support technique après service.' }
     },
+    whatsapp: {
+      title: 'Discutez avec nous',
+      message: 'Bienvenue ! Vous avez un projet en tête ou besoin d\'un support technique ? Écrivez-nous directement sur WhatsApp.',
+      cta: 'Démarrer la discussion',
+      online: 'En ligne',
+      msg1: 'Bonjour ! Bienvenue sur mon portfolio.',
+      msg2: 'Vous avez un projet en tête ou besoin d\'un support IT ? Écrivez votre message ci-dessous et nous continuerons sur WhatsApp.',
+      msg3: 'Demandez un devis gratuit — je réponds généralement en quelques minutes.',
+      inputPlaceholder: 'Tapez votre message...',
+      openingNote: 'Ouverture de WhatsApp...'
+    },
     contact: {
       title: 'Parlons de votre besoin',
       desc: 'Je suis à votre écoute pour toute question technique. Réponse sous 24 heures maximum.',
@@ -208,6 +218,10 @@ export const translations = {
       desc: 'Découvrez quelques-unes de mes réalisations techniques et digitales.',
       portfolio: 'Portfolio',
       recentProjects: 'Projets Récents',
+      overviewTitle: 'Aperçu du Projet',
+      featuresTitle: 'Caractéristiques Principales',
+      visitLive: 'Visiter le Site en Direct',
+      backToProjects: 'Retour aux Projets',
       items: {
         stock: { t: 'Système de Gestion de Stock', d: 'Application web pour le suivi en temps réel des inventaires et alertes de rupture.' },
         showcase: { t: 'Site Vitrine Professionnel', d: 'Conception d\'un site moderne et responsive pour une entreprise locale.' },
@@ -243,7 +257,7 @@ export const translations = {
       ctaPrimary: 'Discuss your project',
       ctaSecondary: 'See my services',
       tagline: 'IT Professional & Developer (BSc Computer Science - USA & BSc Business Computing - Uganda). Passionate about digital accessibility and security.',
-      subtitle: 'I am a passionate lifelong learner currently pursuing degrees in both Computer Science and Business Computing. My academic interests lie at the intersection of software development, data management, and business strategy. I enjoy building functional web applications, working with databases, and exploring how AI can solve everyday challenges. I am committed to continuous growth and applying my technical skills to create meaningful digital solutions.',
+      subtitle: 'Digital Engineering Consultant with over 5 years of hands-on experience supporting businesses, NGOs, and individuals. From custom web applications to secure systems and mobile data collection, I design reliable solutions that turn technical challenges into measurable results.',
       location: 'Kinshasa, DR Congo',
       experience: '5+ Years Experience',
       specialist: 'Web Developper',
@@ -274,7 +288,6 @@ export const translations = {
         rigor: { t: 'Implementation', d: 'Clean system installation and development of structured and secure code.' },
         support: { t: 'Autonomy', d: 'Providing a simple guide and quick training so you are comfortable.' }
       },
-      stats: { projects: 'Projects Completed', experience: 'Years Experience' },
       whyChooseTitle: 'Why Choose Me',
       whyChooseSubtitle: 'Delivering Excellence in Every Project',
       whyChooseDesc: 'I combine technical expertise with business acumen to deliver solutions that drive real results.',
@@ -315,7 +328,7 @@ export const translations = {
         degree: "Licence in Computer Science (USA) & Business Computing (Uganda)",
         regional: "Regional Expert focused on Goma-Kampala axis",
         certified: "Cisco Academy & HP IT for Business Certified",
-        learner: "Life-long Learner dedicated to digital accessibility",
+        learner: "Commitment to Continuous Improvement & Digital Accessibility",
         leadership: "Ethical Leadership and human-centered technology"
       },
       items: {
@@ -413,6 +426,17 @@ export const translations = {
       step3: { t: 'Execution', d: 'Careful work and testing.' },
       step4: { t: 'Guarantee', d: 'Technical support after service.' }
     },
+    whatsapp: {
+      title: 'Chat with Us',
+      message: 'Welcome! Have a project in mind or need IT support? Write to us directly on WhatsApp.',
+      cta: 'Start Chat',
+      online: 'Online',
+      msg1: 'Hello! Welcome to my portfolio.',
+      msg2: 'Have a project in mind or need IT support? Write your message below and we will continue on WhatsApp.',
+      msg3: 'Ask for a free quote — I usually reply within minutes.',
+      inputPlaceholder: 'Type your message...',
+      openingNote: 'Opening WhatsApp...'
+    },
     contact: {
       title: "Let's talk about your needs",
       desc: 'I am here to listen to any technical question. Response within 24 hours maximum.',
@@ -439,6 +463,10 @@ export const translations = {
       desc: 'Discover some of my technical and digital achievements.',
       portfolio: 'Portfolio',
       recentProjects: 'Recent Projects',
+      overviewTitle: 'Project Overview',
+      featuresTitle: 'Key Features',
+      visitLive: 'Visit Live Website',
+      backToProjects: 'Back to Projects',
       items: {
         stock: { t: 'Stock Management System', d: 'Web application for real-time inventory tracking and stock-out alerts.' },
         showcase: { t: 'Professional Showcase Site', d: 'Design of a modern and responsive site for a local business.' },
@@ -474,7 +502,7 @@ export const translations = {
       ctaPrimary: 'Jadili mradi wako',
       ctaSecondary: 'Angalia huduma zangu',
       tagline: 'Mtaalamu wa Kompyuta na Msanidi Programu (Shahada ya Sayansi ya Kompyuta - USA na Shahada ya Biashara - Uganda). Mtangamano wa upatikanaji wa kidijitali na usalama.',
-      subtitle: 'Mimi ni mwanafunzi mwenye shauku ya kujifunza maishani, ninayesomea digrii katika Sayansi ya Kompyuta na Kompyuta ya Biashara. Ninapenda kujenga programu za wavuti zinazofanya kazi, kufanya kazi na hifadhidata, na kuchunguza jinsi AI inavyoweza kutatua changamoto za kila siku. Nimejitolea kwa ukuaji endelevu na kutumia ujuzi wangu wa kiufundi kuunda suluhisho za kidijitali zenye maana.',
+      subtitle: 'Mshauri wa uhandisi wa kidijitali wenye uzoefu wa zaidi ya miaka 5 wa kuwasaidia biashara, NGO na watu binafsi. Kutoka kwa programu za wavuti maalum hadi mifumo salama na ukusanyaji wa data ya simu, nabuni suluhisho zinazogeuka changamoto za kiufundi kuwa matokeo halisi.',
       location: 'Kinshasa, DR Congo',
       experience: 'Miaka 5+ ya U pengalaman',
       specialist: 'Mtaalamu wa Cloud na AI',
@@ -505,7 +533,7 @@ export const translations = {
         rigor: { t: 'Utekelezaji', d: 'Usakinishaji safi wa mifumo na uendelezaji wa kodi iliyopangwa na salama.' },
         support: { t: 'Utawala', d: 'Kutoa mwongozo rahisi na mafunzo ya haraka ili uwe na raha.' }
       },
-      stats: { projects: 'Miradi Iliyokamilika', experience: 'Miaka ya U pengalaman' },
+      stats: { projects: 'Miradi Iliyokamilika', experience: 'Miaka ya U pengalaman', projectsNum: '50+', experienceNum: '5+' },
       whyChooseTitle: 'Kwa Nini Kunichague',
       whyChooseSubtitle: 'Kutoa Excellence katika Kila Mradi',
       whyChooseDesc: 'NingCombine ujuzi wa kiufundi na ujuzi wa biashara kutoa suluthizo zinazonga Matokeo halisi.',
@@ -517,7 +545,6 @@ export const translations = {
       aboutTitle: 'Kuhusu Mimi',
       aboutSubtitle: 'Kuwasha Biashara za Afrika kwa Teknolojia',
       aboutDesc: 'Kwa uzoefu wa zaidi ya miaka 5 katika uhandisi wa kidijitali, nasaidia biashara kubadilisha shughuli zao kwa suluhisho za teknolojia za ubunifu. Kutoka miundombinu ya wingu hadi uunganisho wa AI, ninakuja na utaalamu wa kiwango cha juu kwa kila mradi.',
-      stats: { projects: 'Miradi Iliyokamilika', experience: 'Miaka ya U pengalaman', projectsNum: '50+', experienceNum: '5+' },
       whatIOfferTitle: 'Ninachokutoa',
       whatIOffer: [
          'Uundaji wa Programu za Wavuti Maalum',
@@ -545,7 +572,7 @@ export const translations = {
         degree: "Shahada ya Sayansi ya Kompyuta (USA) na Kompyuta ya Biashara (Uganda)",
         regional: "Mtaalamu wa kikanda anayezingatia mhimili wa Goma-Kampala",
         certified: "Aliidhinishwa na Cisco Academy na HP IT for Business",
-        learner: "Ahadi ya 'Life-long Learner' kwa upatikanaji wa kidijitali",
+        learner: "Ahadi ya kuboresha ujuzi endelevu na upatikanaji wa kidijitali",
         leadership: "Uongozi wa kimaadili na teknolojia inayomlenga binadamu"
       },
       items: {
@@ -643,6 +670,17 @@ export const translations = {
       step3: { t: 'Utekelezaji', d: 'Kazi ya uangalifu na vipimo.' },
       step4: { t: 'Dhamana', d: 'Usaidizi wa kiufundi baada ya huduma.' }
     },
+    whatsapp: {
+      title: 'Zungumza Nasi',
+      message: 'Karibu! Una mradi akilini au unahitaji usaidizi wa IT? Tuandikie moja kwa moja kwenye WhatsApp.',
+      cta: 'Anza Mazungumzo',
+      online: 'Mtandaoni',
+      msg1: 'Habari! Karibu kwenye portfolio yangu.',
+      msg2: 'Una mradi akilini au unahitaji usaidizi wa IT? Andika ujumbe wako hapa chini na tuendelee WhatsApp.',
+      msg3: 'Omba bei bila malipo — kwa kawaida najibu ndani ya dakika chache.',
+      inputPlaceholder: 'Andika ujumbe wako...',
+      openingNote: 'Inafungua WhatsApp...'
+    },
     contact: {
       title: 'Tuzungumzie mahitaji yako',
       desc: 'Niko hapa kusikiliza swali lolote la kiufundi. Majibu ndani ya masaa 24 zaidi.',
@@ -668,6 +706,10 @@ export const translations = {
       desc: 'Gundua baadhi ya mafanikio yangu ya kiufundi na kidijitali.',
       portfolio: 'Kazi Zangu',
       recentProjects: 'Miradi ya Hivi Karibuni',
+      overviewTitle: 'Muhtasari wa Mradi',
+      featuresTitle: 'Vipengele Muhimu',
+      visitLive: 'Tembelea Tovuti Hai',
+      backToProjects: 'Rudi kwa Miradi',
       items: {
         stock: { t: 'Mfumo wa Usimamizi wa Hisa', d: 'Programu ya wavuti kwa ufuatiliaji wa hesabu kwa wakati halisi na arifa za upungufu.' },
         showcase: { t: 'Tovuti ya Kitaaluma', d: 'Usanifu wa tovuti ya kisasa na inayojibu kwa biashara ya ndani.' },

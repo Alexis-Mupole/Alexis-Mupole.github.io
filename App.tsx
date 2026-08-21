@@ -10,9 +10,10 @@ import ContactPage from './pages/ContactPage';
 import ProjectsPage from './pages/ProjectsPage';
 import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
-import { LanguageProvider } from './src/context/LanguageContext';
+import ProjectDetailPage from './pages/ProjectDetailPage';
+import { LanguageProvider, useTranslation } from './src/context/LanguageContext';
 import { ThemeProvider } from './src/context/ThemeContext';
-import { MessageCircle } from 'lucide-react';
+import WhatsAppChat from './components/WhatsAppChat';
 
 class ErrorBoundary extends React.Component<{ children: React.ReactNode }, { hasError: boolean }> {
   constructor(props: { children: React.ReactNode }) {
@@ -52,38 +53,33 @@ class ErrorBoundary extends React.Component<{ children: React.ReactNode }, { has
 
 export type Page = 'home' | 'services' | 'solutions' | 'projects' | 'pricing' | 'contact' | 'privacy' | 'terms';
 
-const WhatsAppButton: React.FC = () => {
-  return (
-    <a
-      href="https://wa.me/243997306308"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all hover:scale-110 animate-bounce"
-      aria-label="Chat on WhatsApp"
-    >
-      <MessageCircle size={28} />
-    </a>
-  );
-};
+interface Route {
+  page: Page;
+  projectId: string | null;
+}
 
-const pageFromHash = (): Page => {
-  const hash = window.location.hash.replace('#', '') as Page;
+const parseHash = (): Route => {
+  const hash = window.location.hash.replace('#', '');
+  if (hash.startsWith('project/')) {
+    return { page: 'projects', projectId: hash.slice('project/'.length) };
+  }
   const valid: Page[] = ['home', 'services', 'solutions', 'projects', 'pricing', 'contact', 'privacy', 'terms'];
-  return valid.includes(hash) ? hash : 'home';
+  return valid.includes(hash as Page) ? { page: hash as Page, projectId: null } : { page: 'home', projectId: null };
 };
 
 const AppContent: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState<Page>(pageFromHash);
+  const [route, setRoute] = useState<Route>(parseHash);
+  const { getProjects } = useTranslation();
 
   const navigate = (page: Page) => {
-    setCurrentPage(page);
+    setRoute({ page, projectId: null });
     window.location.hash = page === 'home' ? '' : page;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   useEffect(() => {
     const onHashChange = () => {
-      setCurrentPage(pageFromHash());
+      setRoute(parseHash());
       window.scrollTo({ top: 0, behavior: 'smooth' });
     };
     window.addEventListener('hashchange', onHashChange);
@@ -91,7 +87,13 @@ const AppContent: React.FC = () => {
   }, []);
 
   const renderPage = () => {
-    switch (currentPage) {
+    if (route.projectId) {
+      const project = getProjects().find((p) => p.id === route.projectId);
+      if (project) {
+        return <ProjectDetailPage project={project} onNavigate={navigate} />;
+      }
+    }
+    switch (route.page) {
       case 'home':
         return <Home onNavigate={navigate} />;
       case 'services':
@@ -115,12 +117,12 @@ const AppContent: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-white dark:bg-slate-900 overflow-x-hidden">
-      <Navbar currentPage={currentPage} onNavigate={navigate} />
+      <Navbar currentPage={route.page} onNavigate={navigate} />
       <main className="flex-grow">
         {renderPage()}
       </main>
       <Footer onNavigate={navigate} />
-      <WhatsAppButton />
+      <WhatsAppChat />
     </div>
   );
 };

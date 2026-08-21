@@ -1,7 +1,31 @@
-import { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { Language, translations } from '../../translations';
 import projectsData from '../../data/projects.json';
 import servicesData from '../../data/services.json';
+
+const STORAGE_KEY = 'alexis-portfolio-lang';
+
+const isLanguage = (value: string | null): value is Language =>
+  value === 'fr' || value === 'en' || value === 'sw';
+
+const detectLanguage = (): Language => {
+  try {
+    const saved = window.localStorage.getItem(STORAGE_KEY);
+    if (isLanguage(saved)) return saved;
+  } catch (e) {
+    void e;
+  }
+  const candidates =
+    navigator.languages && navigator.languages.length > 0
+      ? navigator.languages
+      : [navigator.language];
+  for (const candidate of candidates) {
+    const code = candidate.toLowerCase();
+    if (code.startsWith('fr')) return 'fr';
+    if (code.startsWith('sw')) return 'sw';
+  }
+  return 'en';
+};
 
 interface LanguageContextType {
   lang: Language;
@@ -19,8 +43,21 @@ interface LanguageContextType {
 export const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [lang, setLang] = useState<Language>('en');
+  const [lang, setLangState] = useState<Language>(detectLanguage);
   const t = translations[lang];
+
+  useEffect(() => {
+    document.documentElement.lang = lang;
+  }, [lang]);
+
+  const setLang = (l: Language) => {
+    setLangState(l);
+    try {
+      window.localStorage.setItem(STORAGE_KEY, l);
+    } catch (e) {
+      void e;
+    }
+  };
 
   const getProjectTitle = (id: string): string => {
     const project = projectsData.projects.find(p => p.id === id);

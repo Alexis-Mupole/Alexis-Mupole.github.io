@@ -86,10 +86,10 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
 
             <motion.div variants={itemVariants} className="flex flex-wrap gap-4 pt-2">
               <button 
-                onClick={() => onNavigate('projects')}
+                onClick={() => onNavigate('services')}
                 className="inline-flex items-center gap-3 px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/25 hover:shadow-xl hover:shadow-blue-600/30 hover:-translate-y-0.5"
               >
-                {t.hero.viewWork}
+                {t.hero.ctaSecondary}
                 <ArrowRight size={18} />
               </button>
               <button 

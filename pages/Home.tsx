@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from '../components/Hero';
+import Solutions from '../components/Solutions';
 import Skills from '../components/Skills';
 import Projects from '../components/Projects';
 import { Page } from '../App';
@@ -16,8 +17,10 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
   return (
     <div className="bg-white dark:bg-slate-900">
       <Hero onNavigate={onNavigate} />
-      
-      <section className="py-24 lg:py-32 bg-slate-50 dark:bg-slate-800">
+
+      <Solutions onNavigate={onNavigate} />
+
+      <section className="py-24 lg:py-32 bg-white dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-blue-600 text-sm font-semibold uppercase tracking-wider mb-3 block">{t.home.whyMe.title}</span>
