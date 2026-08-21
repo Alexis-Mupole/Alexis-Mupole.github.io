@@ -12,7 +12,7 @@ interface HomeProps {
 }
 
 const Home: React.FC<HomeProps> = ({ onNavigate }) => {
-  const { t, lang } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div className="bg-white dark:bg-slate-900">
@@ -132,13 +132,6 @@ const FeatureCard: React.FC<{icon: React.ReactNode; title: string; description: 
     </div>
     <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{title}</h3>
     <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-sm">{description}</p>
-  </div>
-);
-
-const StatCard: React.FC<{number: string; label: string}> = ({number, label}) => (
-  <div>
-    <div className="text-4xl font-bold text-blue-600">{number}</div>
-    <div className="text-sm text-slate-600 dark:text-slate-300">{label}</div>
   </div>
 );
 

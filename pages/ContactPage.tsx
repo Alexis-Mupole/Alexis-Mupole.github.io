@@ -3,7 +3,7 @@ import { useTranslation } from '../src/context/LanguageContext';
 import { Mail, Phone, MapPin, Send, MessageCircle, Clock, CheckCircle } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
-  const { t, lang } = useTranslation();
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
 

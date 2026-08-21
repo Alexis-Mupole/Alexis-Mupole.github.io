@@ -1,9 +1,9 @@
 import React from 'react';
 import { Page } from '../App';
 import { useTranslation } from '../src/context/LanguageContext';
-import { 
-  Code, Database, Settings, Wifi, Shield, FileSpreadsheet, 
-  CheckCircle, ArrowRight, Building, Landmark
+import {
+  Code, Database, Wifi, FileSpreadsheet,
+  CheckCircle, ArrowRight, Landmark
 } from 'lucide-react';
 
 interface SolutionsAfriquePageProps {
@@ -40,7 +40,7 @@ const SolutionsAfriquePage: React.FC<SolutionsAfriquePageProps> = ({ onNavigate 
         </div>
       </section>
 
-      {t.approach.sections.map((section: any, index: number) => (
+      {t.approach.sections.map((section, index) => (
         <section key={index} className={`py-20 lg:py-24 ${index % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-slate-50 dark:bg-slate-800'}`}>
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">

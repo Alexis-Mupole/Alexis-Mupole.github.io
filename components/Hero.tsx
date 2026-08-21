@@ -1,7 +1,7 @@
 import React from 'react';
 import { Page } from '../App';
 import { useTranslation } from '../src/context/LanguageContext';
-import { MessageCircle, Mail, Linkedin, Twitter, ArrowRight, MapPin, Calendar, Award, Check, Download } from 'lucide-react';
+import { MessageCircle, Mail, Linkedin, Twitter, ArrowRight, MapPin, Calendar, Award, Download } from 'lucide-react';
 import { motion } from 'framer-motion';
 import profileImage from '../images/alex.jpeg';
 
@@ -28,7 +28,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
       y: 0,
       opacity: 1,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         damping: 20,
         stiffness: 100
       }

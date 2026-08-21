@@ -11,7 +11,7 @@ interface ServicesPageProps {
 }
 
 const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
-  const { t, lang } = useTranslation();
+  const { t } = useTranslation();
 
   const colorClasses: Record<string, { bg: string; text: string; border: string }> = {
     blue: { bg: "bg-blue-50", text: "text-blue-600", border: "border-blue-200" },

@@ -553,7 +553,8 @@ export const translations = {
         'Mifumo ya Juu ya Biashara Mtandaoni (E-commerce)',
         'Ukarabati na Uboreshaji wa Tovuti',
         'Uboreshaji wa Kidijitali na Usanifu Upya'
-      ]
+      ],
+      viewAllProjects: 'Tazama Miradi Yote'
     },
     services: {
       title: 'Huduma za IT',
@@ -699,7 +700,8 @@ export const translations = {
         phone: 'Simu',
         location: 'Mahali',
         availability: 'Upatikanaji'
-      }
+      },
+      placeholder: 'Niambie kuhusu mradi wako...'
     },
     projects: {
       title: 'Miradi ya Hivi Karibuni',

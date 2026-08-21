@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { Language, translations } from '../../translations';
 import projectsData from '../../data/projects.json';
@@ -42,7 +43,7 @@ interface LanguageContextType {
 
 export const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [lang, setLangState] = useState<Language>(detectLanguage);
   const t = translations[lang];
 

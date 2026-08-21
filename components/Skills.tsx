@@ -8,15 +8,6 @@ interface SkillsProps {
   onNavigate: (page: Page) => void;
 }
 
-const fallbackIcon = (name: string, color: string) => {
-  const initial = name.replace('Adobe ', '').charAt(0);
-  return (
-    <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-white font-bold text-lg ${color}`}>
-      {initial}
-    </div>
-  );
-};
-
 const skillCategories = [
   {
     title: 'Frontend Development',
@@ -111,7 +102,7 @@ const Skills: React.FC<SkillsProps> = ({ onNavigate }) => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { type: "spring", damping: 20, stiffness: 100 }
+      transition: { type: "spring" as const, damping: 20, stiffness: 100 }
     }
   };
 

@@ -19,7 +19,7 @@ interface ProjectsProps {
 }
 
 const Projects: React.FC<ProjectsProps> = ({ limit }) => {
-  const { lang, getProjects, t } = useTranslation();
+  const { getProjects, t } = useTranslation();
   const allProjects = getProjects();
   const projects = limit ? allProjects.slice(0, limit) : allProjects;
 

@@ -2,9 +2,12 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useTranslation } from '../src/context/LanguageContext';
 import { MessageCircle, X, Send, ArrowRight } from 'lucide-react';
 
+type WelcomeKey = 'msg1' | 'msg2' | 'msg3';
+
 interface ChatMessage {
   id: number;
-  text: string;
+  welcomeKey?: WelcomeKey;
+  text?: string;
   time: string;
   outgoing: boolean;
 }
@@ -101,9 +104,9 @@ const WhatsAppChat: React.FC = () => {
     setHasOpened(true);
     if (messages.length === 0) {
       setMessages([
-        { id: 1, text: t.whatsapp.msg1, time: formatTime(), outgoing: false },
-        { id: 2, text: t.whatsapp.msg2, time: formatTime(), outgoing: false },
-        { id: 3, text: t.whatsapp.msg3, time: formatTime(), outgoing: false }
+        { id: 1, welcomeKey: 'msg1', time: formatTime(), outgoing: false },
+        { id: 2, welcomeKey: 'msg2', time: formatTime(), outgoing: false },
+        { id: 3, welcomeKey: 'msg3', time: formatTime(), outgoing: false }
       ]);
     }
   };
@@ -163,7 +166,7 @@ const WhatsAppChat: React.FC = () => {
                   } rounded-xl px-3 py-2 max-w-[85%] shadow-sm`}
                 >
                   <p className="text-sm text-slate-800 dark:text-white leading-snug break-words">
-                    {m.text}
+                    {m.welcomeKey ? t.whatsapp[m.welcomeKey] : m.text}
                   </p>
                   <p className="text-[10px] text-slate-400 dark:text-slate-200/70 text-right mt-0.5">
                     {m.time}
