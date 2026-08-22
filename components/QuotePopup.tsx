@@ -38,6 +38,11 @@ const QuotePopup: React.FC<QuotePopupProps> = ({ onGetQuote }) => {
 
   const handleCta = () => {
     setVisible(false);
+    try {
+      window.sessionStorage.setItem('scroll-to-quote-form', '1');
+    } catch (e) {
+      void e;
+    }
     onGetQuote();
   };
 

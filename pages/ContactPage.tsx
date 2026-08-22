@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from '../src/context/LanguageContext';
 import { Mail, Phone, MapPin, Send, MessageCircle, Clock, CheckCircle, User, Briefcase, ChevronDown, ShieldCheck } from 'lucide-react';
 
@@ -11,18 +11,39 @@ interface FormState {
   email: string;
   phone: string;
   projectType: string;
+  projectTypeOther: string;
   budget: string;
   timeline: string;
   message: string;
 }
 
-const emptyForm: FormState = { name: '', email: '', phone: '', projectType: '', budget: '', timeline: '', message: '' };
+const emptyForm: FormState = { name: '', email: '', phone: '', projectType: '', projectTypeOther: '', budget: '', timeline: '', message: '' };
 
 const ContactPage: React.FC = () => {
   const { t } = useTranslation();
   const [formData, setFormData] = useState<FormState>(emptyForm);
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
+  const [highlightForm, setHighlightForm] = useState(false);
+  const formCardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    let flagged = false;
+    try {
+      flagged = window.sessionStorage.getItem('scroll-to-quote-form') === '1';
+      if (flagged) window.sessionStorage.removeItem('scroll-to-quote-form');
+    } catch (e) {
+      void e;
+    }
+    if (!flagged) return;
+
+    const timer = setTimeout(() => {
+      formCardRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setHighlightForm(true);
+      setTimeout(() => setHighlightForm(false), 2500);
+    }, 650);
+    return () => clearTimeout(timer);
+  }, []);
 
   const updateField = (field: keyof FormState) => (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -84,8 +105,8 @@ const ContactPage: React.FC = () => {
 
       <section className="py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            <div className="lg:col-span-1 space-y-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 xl:gap-16">
+            <div className="lg:col-span-4 xl:col-span-4 space-y-8 self-start lg:sticky lg:top-28">
               <div>
                 <h2 className="text-blue-600 text-sm font-semibold uppercase tracking-wider mb-3">
                   {t.contact.getInTouch}
@@ -142,8 +163,11 @@ const ContactPage: React.FC = () => {
               </div>
             </div>
 
-            <div className="lg:col-span-2">
-              <div className="bg-white rounded-2xl shadow-xl border border-slate-100 p-8 lg:p-10">
+            <div className="lg:col-span-8 xl:col-span-8">
+              <div 
+                ref={formCardRef}
+                className={`bg-white rounded-2xl shadow-xl border p-6 sm:p-8 lg:p-10 xl:p-12 scroll-mt-28 transition-shadow duration-500 ${highlightForm ? 'border-blue-300 ring-4 ring-blue-100' : 'border-slate-100'}`}
+              >
                 {submitted ? (
                   <div className="text-center py-12">
                     <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -257,6 +281,24 @@ const ContactPage: React.FC = () => {
                           <ChevronDown size={16} className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" />
                         </div>
                       </div>
+
+                      {formData.projectType === t.contact.projectTypes[t.contact.projectTypes.length - 1] && (
+                        <div className="space-y-2">
+                          <label htmlFor="cf-project-other" className="text-sm font-semibold text-slate-700">
+                            {t.contact.otherProjectLabel}
+                          </label>
+                          <input 
+                            id="cf-project-other"
+                            type="text"
+                            name="project_type_other"
+                            required
+                            value={formData.projectTypeOther}
+                            onChange={updateField('projectTypeOther')}
+                            placeholder={t.contact.otherProjectPlaceholder}
+                            className={inputClass}
+                          />
+                        </div>
+                      )}
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                         <div className="space-y-2">

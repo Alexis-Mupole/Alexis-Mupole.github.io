@@ -226,6 +226,10 @@ export const translations = {
       projectTypePlaceholder: 'Sélectionnez un type de projet',
       projectTypes: [
         'Site Web Vitrine',
+        'Site E-commerce / Boutique en Ligne',
+        'Blog / Site d\'Actualités',
+        'Portfolio en Ligne',
+        'Landing Page / Page de Vente',
         'Application Web sur Mesure',
         'Collecte de Données Mobiles (ODK/Kobo)',
         'Réseau & Infrastructure',
@@ -233,6 +237,8 @@ export const translations = {
         'Formation Numérique',
         'Autre'
       ],
+      otherProjectLabel: 'Décrivez votre projet',
+      otherProjectPlaceholder: 'Ex : un site web pour mon école...',
       budget: 'Budget Estimé',
       budgetPlaceholder: 'Sélectionnez une fourchette',
       budgets: [
@@ -510,6 +516,10 @@ export const translations = {
       projectTypePlaceholder: 'Select a project type',
       projectTypes: [
         'Showcase Website',
+        'E-commerce / Online Store',
+        'Blog / News Website',
+        'Online Portfolio',
+        'Landing Page / Sales Page',
         'Custom Web Application',
         'Mobile Data Collection (ODK/Kobo)',
         'Network & Infrastructure',
@@ -517,6 +527,8 @@ export const translations = {
         'Digital Training',
         'Other'
       ],
+      otherProjectLabel: 'Describe your project',
+      otherProjectPlaceholder: 'e.g. a website for my school...',
       budget: 'Estimated Budget',
       budgetPlaceholder: 'Select a range',
       budgets: [
@@ -794,6 +806,10 @@ export const translations = {
       projectTypePlaceholder: 'Chagua aina ya mradi',
       projectTypes: [
         'Tovuti ya Kitaaluma',
+        'Tovuti ya Biashara Mtandaoni',
+        'Blogu / Tovuti ya Habari',
+        'Tovuti ya Kazi Zangu (Portfolio)',
+        'Kurasa Moja (Landing Page)',
         'Programu ya Wavuti ya Kipekee',
         'Ukusanyaji wa Takwimu za Simu (ODK/Kobo)',
         'Mtandao & Miundombinu',
@@ -801,6 +817,8 @@ export const translations = {
         'Mafunzo ya Kidijitali',
         'Nyingine'
       ],
+      otherProjectLabel: 'Eleza mradi wako',
+      otherProjectPlaceholder: 'Mfano: tovuti ya shule yangu...',
       budget: 'Bajeti Iliyokadiriwa',
       budgetPlaceholder: 'Chagua kiwango',
       budgets: [
