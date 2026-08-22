@@ -1,12 +1,32 @@
 import React, { useState } from 'react';
 import { useTranslation } from '../src/context/LanguageContext';
-import { Mail, Phone, MapPin, Send, MessageCircle, Clock, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, MessageCircle, Clock, CheckCircle, User, Briefcase, ChevronDown, ShieldCheck } from 'lucide-react';
+
+const inputClass = "w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all";
+
+const selectClass = "w-full px-4 py-3 pr-10 border border-slate-200 rounded-xl bg-white appearance-none focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all text-slate-900 cursor-pointer";
+
+interface FormState {
+  name: string;
+  email: string;
+  phone: string;
+  projectType: string;
+  budget: string;
+  timeline: string;
+  message: string;
+}
+
+const emptyForm: FormState = { name: '', email: '', phone: '', projectType: '', budget: '', timeline: '', message: '' };
 
 const ContactPage: React.FC = () => {
   const { t } = useTranslation();
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formData, setFormData] = useState<FormState>(emptyForm);
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
+
+  const updateField = (field: keyof FormState) => (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => setFormData({ ...formData, [field]: e.target.value });
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -28,7 +48,7 @@ const ContactPage: React.FC = () => {
       if (response.ok && result.success) {
         setSubmitted(true);
         form.reset();
-        setFormData({ name: '', email: '', message: '' });
+        setFormData(emptyForm);
       } else {
         alert(result.message || "Error");
       }
@@ -145,64 +165,173 @@ const ContactPage: React.FC = () => {
                 ) : (
                   <form 
                     onSubmit={handleSubmit}
-                    className="space-y-6"
+                    className="space-y-8"
                   >
                     <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
                     
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <label className="text-sm font-semibold text-slate-700">
-                          {t.contact.form.name}
-                        </label>
-                        <input 
-                          type="text"
-                          name="name"
-                          required
-                          value={formData.name}
-                          onChange={(e) => setFormData({...formData, name: e.target.value})}
-                          placeholder={t.contact.form.name}
-                          className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all"
-                        />
+                    <div className="space-y-6">
+                      <div className="flex items-center gap-3">
+                        <span className="w-9 h-9 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">1</span>
+                        <h4 className="text-lg font-bold text-slate-900">{t.contact.sectionYourInfo}</h4>
                       </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div className="space-y-2">
+                          <label htmlFor="cf-name" className="text-sm font-semibold text-slate-700 flex items-center gap-1.5">
+                            <User size={14} className="text-blue-600" />
+                            {t.contact.form.name}
+                          </label>
+                          <input 
+                            id="cf-name"
+                            type="text"
+                            name="name"
+                            required
+                            value={formData.name}
+                            onChange={updateField('name')}
+                            placeholder={t.contact.form.name}
+                            className={inputClass}
+                          />
+                        </div>
+                        <div className="space-y-2">
+                          <label htmlFor="cf-email" className="text-sm font-semibold text-slate-700 flex items-center gap-1.5">
+                            <Mail size={14} className="text-blue-600" />
+                            {t.contact.form.email}
+                          </label>
+                          <input 
+                            id="cf-email"
+                            type="email"
+                            name="email"
+                            required
+                            value={formData.email}
+                            onChange={updateField('email')}
+                            placeholder="your@email.com"
+                            className={inputClass}
+                          />
+                        </div>
+                      </div>
+
                       <div className="space-y-2">
-                        <label className="text-sm font-semibold text-slate-700">
-                          {t.contact.form.email}
+                        <label htmlFor="cf-phone" className="text-sm font-semibold text-slate-700 flex items-center gap-1.5">
+                          <Phone size={14} className="text-blue-600" />
+                          {t.contact.phoneOptional}
                         </label>
                         <input 
-                          type="email"
-                          name="email"
-                          required
-                          value={formData.email}
-                          onChange={(e) => setFormData({...formData, email: e.target.value})}
-                          placeholder="your@email.com"
-                          className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all"
+                          id="cf-phone"
+                          type="tel"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={updateField('phone')}
+                          placeholder="+243 XXX XXX XXX"
+                          className={inputClass}
                         />
                       </div>
                     </div>
 
-                    <div className="space-y-2">
-                      <label className="text-sm font-semibold text-slate-700">
-                        {t.contact.form.msg}
-                      </label>
-                      <textarea 
-                        name="message"
-                        required
-                        rows={6}
-                        value={formData.message}
-                        onChange={(e) => setFormData({...formData, message: e.target.value})}
-                        placeholder={t.contact.placeholder}
-                        className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all resize-none"
-                      />
+                    <div className="border-t border-slate-100" />
+
+                    <div className="space-y-6">
+                      <div className="flex items-center gap-3">
+                        <span className="w-9 h-9 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">2</span>
+                        <h4 className="text-lg font-bold text-slate-900">{t.contact.sectionProject}</h4>
+                      </div>
+
+                      <div className="space-y-2">
+                        <label htmlFor="cf-project-type" className="text-sm font-semibold text-slate-700 flex items-center gap-1.5">
+                          <Briefcase size={14} className="text-blue-600" />
+                          {t.contact.projectType}
+                        </label>
+                        <div className="relative">
+                          <select
+                            id="cf-project-type"
+                            name="project_type"
+                            required
+                            value={formData.projectType}
+                            onChange={updateField('projectType')}
+                            className={`${selectClass} ${!formData.projectType ? 'text-slate-400' : ''}`}
+                          >
+                            <option value="" disabled>{t.contact.projectTypePlaceholder}</option>
+                            {t.contact.projectTypes.map((type) => (
+                              <option key={type} value={type}>{type}</option>
+                            ))}
+                          </select>
+                          <ChevronDown size={16} className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" />
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div className="space-y-2">
+                          <label htmlFor="cf-budget" className="text-sm font-semibold text-slate-700">
+                            {t.contact.budget}
+                          </label>
+                          <div className="relative">
+                            <select
+                              id="cf-budget"
+                              name="budget"
+                              value={formData.budget}
+                              onChange={updateField('budget')}
+                              className={`${selectClass} ${!formData.budget ? 'text-slate-400' : ''}`}
+                            >
+                              <option value="">{t.contact.budgetPlaceholder}</option>
+                              {t.contact.budgets.map((b) => (
+                                <option key={b} value={b}>{b}</option>
+                              ))}
+                            </select>
+                            <ChevronDown size={16} className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" />
+                          </div>
+                        </div>
+                        <div className="space-y-2">
+                          <label htmlFor="cf-timeline" className="text-sm font-semibold text-slate-700">
+                            {t.contact.timeline}
+                          </label>
+                          <div className="relative">
+                            <select
+                              id="cf-timeline"
+                              name="timeline"
+                              value={formData.timeline}
+                              onChange={updateField('timeline')}
+                              className={`${selectClass} ${!formData.timeline ? 'text-slate-400' : ''}`}
+                            >
+                              <option value="">{t.contact.timelinePlaceholder}</option>
+                              {t.contact.timelines.map((tl) => (
+                                <option key={tl} value={tl}>{tl}</option>
+                              ))}
+                            </select>
+                            <ChevronDown size={16} className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="space-y-2">
+                        <label htmlFor="cf-message" className="text-sm font-semibold text-slate-700">
+                          {t.contact.form.msg}
+                        </label>
+                        <textarea 
+                          id="cf-message"
+                          name="message"
+                          required
+                          rows={5}
+                          value={formData.message}
+                          onChange={updateField('message')}
+                          placeholder={t.contact.placeholder}
+                          className={`${inputClass} resize-none`}
+                        />
+                      </div>
                     </div>
 
-                    <button 
-                      type="submit"
-                      disabled={sending}
-                      className="w-full inline-flex items-center justify-center gap-3 px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
-                    >
-                      <Send size={18} />
-                      {sending ? "Sending..." : t.contact.form.send}
-                    </button>
+                    <div className="pt-2 space-y-3">
+                      <button 
+                        type="submit"
+                        disabled={sending}
+                        className="w-full inline-flex items-center justify-center gap-3 px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors disabled:opacity-70 disabled:cursor-not-allowed shadow-lg shadow-blue-600/25"
+                      >
+                        <Send size={18} />
+                        {sending ? "Sending..." : t.contact.form.send}
+                      </button>
+                      <p className="flex items-center justify-center gap-1.5 text-xs text-slate-500">
+                        <ShieldCheck size={14} className="text-green-600" />
+                        {t.contact.responseNote}
+                      </p>
+                    </div>
                   </form>
                 )}
               </div>

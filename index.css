@@ -65,6 +65,24 @@ body {
   50% { transform: translateY(-20px); }
 }
 
+@keyframes quote-popup-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes quote-popup-rise {
+  from { opacity: 0; transform: translateY(24px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.quote-popup-backdrop {
+  animation: quote-popup-fade 0.25s ease-out;
+}
+
+.quote-popup-card {
+  animation: quote-popup-rise 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
 .animate-marquee {
   display: flex;
   animation: marquee 40s linear infinite;

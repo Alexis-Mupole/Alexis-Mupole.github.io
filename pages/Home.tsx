@@ -5,6 +5,7 @@ import Skills from '../components/Skills';
 import Projects from '../components/Projects';
 import { Page } from '../App';
 import { useTranslation } from '../src/context/LanguageContext';
+import QuotePopup from '../components/QuotePopup';
 import { ArrowRight, Zap, Shield, Globe, Clock } from 'lucide-react';
 
 interface HomeProps {
@@ -16,6 +17,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 
   return (
     <div className="bg-white dark:bg-slate-900">
+      <QuotePopup onGetQuote={() => onNavigate('contact')} />
       <Hero onNavigate={onNavigate} />
 
       <Solutions onNavigate={onNavigate} />

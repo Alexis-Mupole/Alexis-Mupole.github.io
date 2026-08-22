@@ -56,6 +56,13 @@ export const translations = {
       aboutSubtitle: 'Donner du Pouvoir aux Entreprises Africaines avec la Technologie',
       aboutDesc: "Avec plus de 5 ans d'expérience en ingénierie numérique, j'aide les entreprises à transformer leurs opérations grâce à des solutions technologiques innovantes. De l'architecture cloud à l'intégration IA, j'apporte une expertise de classe mondiale à chaque projet.",
       stats: { projects: 'Projets Réalisés', experience: "Années d'Expérience", projectsNum: '50+', experienceNum: '5+' },
+      quotePopup: {
+        badge: 'Devis Gratuit & Sans Engagement',
+        title: 'Un projet en tête ?',
+        desc: "Décrivez votre besoin en 2 minutes et recevez un devis personnalisé sous 24 heures. Choisissez le type de projet, votre budget et votre délai — c'est simple.",
+        cta: 'Demander un Devis',
+        later: 'Peut-être plus tard'
+      },
       whatIOfferTitle: 'Ce que j\'offre',
       whatIOffer: [
         'Développement d\'Applications Web Sur Mesure',
@@ -211,7 +218,39 @@ export const translations = {
         location: 'Localisation',
         availability: 'Disponibilité'
       },
-      placeholder: "Parlez-moi de votre projet..."
+      placeholder: "Parlez-moi de votre projet...",
+      sectionYourInfo: 'Vos coordonnées',
+      sectionProject: 'Détails du projet',
+      phoneOptional: 'Téléphone (optionnel)',
+      projectType: 'Type de Projet',
+      projectTypePlaceholder: 'Sélectionnez un type de projet',
+      projectTypes: [
+        'Site Web Vitrine',
+        'Application Web sur Mesure',
+        'Collecte de Données Mobiles (ODK/Kobo)',
+        'Réseau & Infrastructure',
+        'Support & Maintenance Informatique',
+        'Formation Numérique',
+        'Autre'
+      ],
+      budget: 'Budget Estimé',
+      budgetPlaceholder: 'Sélectionnez une fourchette',
+      budgets: [
+        'Moins de 500 $',
+        '500 $ – 1 500 $',
+        '1 500 $ – 5 000 $',
+        'Plus de 5 000 $',
+        'Pas encore sûr'
+      ],
+      timeline: 'Délai Souhaité',
+      timelinePlaceholder: 'Sélectionnez un délai',
+      timelines: [
+        'Dès que possible',
+        'Dans 1 mois',
+        '1 à 3 mois',
+        'Flexible'
+      ],
+      responseNote: 'Réponse garantie sous 24 heures'
     },
     projects: {
       title: 'Projets Récents',
@@ -300,6 +339,13 @@ export const translations = {
       aboutSubtitle: 'Empowering African Businesses with Technology',
       aboutDesc: "With over 5 years of experience in digital engineering, I help businesses transform their operations through innovative technology solutions. From cloud architecture to AI integration, I bring world-class expertise to every project.",
       stats: { projects: 'Projects Completed', experience: 'Years Experience', projectsNum: '50+', experienceNum: '5+' },
+      quotePopup: {
+        badge: 'Free Quote, No Commitment',
+        title: 'Have a project in mind?',
+        desc: "Describe your needs in 2 minutes and receive a personalized quote within 24 hours. Pick your project type, budget and timeline — it's that simple.",
+        cta: 'Request a Quote',
+        later: 'Maybe later'
+      },
       whatIOfferTitle: 'What I Offer',
       whatIOffer: [
        'Custom Web Application Development',
@@ -456,7 +502,39 @@ export const translations = {
         location: 'Location',
         availability: 'Availability'
       },
-      placeholder: "Tell me about your project..."
+      placeholder: "Tell me about your project...",
+      sectionYourInfo: 'Your Information',
+      sectionProject: 'Project Details',
+      phoneOptional: 'Phone (optional)',
+      projectType: 'Project Type',
+      projectTypePlaceholder: 'Select a project type',
+      projectTypes: [
+        'Showcase Website',
+        'Custom Web Application',
+        'Mobile Data Collection (ODK/Kobo)',
+        'Network & Infrastructure',
+        'IT Support & Maintenance',
+        'Digital Training',
+        'Other'
+      ],
+      budget: 'Estimated Budget',
+      budgetPlaceholder: 'Select a range',
+      budgets: [
+        'Under $500',
+        '$500 – $1,500',
+        '$1,500 – $5,000',
+        'Over $5,000',
+        'Not sure yet'
+      ],
+      timeline: 'Desired Timeline',
+      timelinePlaceholder: 'Select a timeline',
+      timelines: [
+        'As soon as possible',
+        'Within 1 month',
+        '1 to 3 months',
+        'Flexible'
+      ],
+      responseNote: 'Guaranteed response within 24 hours'
     },
     projects: {
       title: 'Recent Projects',
@@ -534,6 +612,13 @@ export const translations = {
         support: { t: 'Utawala', d: 'Kutoa mwongozo rahisi na mafunzo ya haraka ili uwe na raha.' }
       },
       stats: { projects: 'Miradi Iliyokamilika', experience: 'Miaka ya U pengalaman', projectsNum: '50+', experienceNum: '5+' },
+      quotePopup: {
+        badge: 'Bei Bure, Bila Dhamana',
+        title: 'Una mradi akilini?',
+        desc: 'Eleze mahitaji yako kwa dakika 2 na upate bei maalum ndani ya masaa 24. Chagua aina ya mradi, bajeti na muda wako — rahisi sana.',
+        cta: 'Omba Bei',
+        later: 'Baadaye'
+      },
       whyChooseTitle: 'Kwa Nini Kunichague',
       whyChooseSubtitle: 'Kutoa Excellence katika Kila Mradi',
       whyChooseDesc: 'NingCombine ujuzi wa kiufundi na ujuzi wa biashara kutoa suluthizo zinazonga Matokeo halisi.',
@@ -701,7 +786,39 @@ export const translations = {
         location: 'Mahali',
         availability: 'Upatikanaji'
       },
-      placeholder: 'Niambie kuhusu mradi wako...'
+      placeholder: 'Niambie kuhusu mradi wako...',
+      sectionYourInfo: 'Maelezo Yako',
+      sectionProject: 'Maelezo ya Mradi',
+      phoneOptional: 'Simu (si lazima)',
+      projectType: 'Aina ya Mradi',
+      projectTypePlaceholder: 'Chagua aina ya mradi',
+      projectTypes: [
+        'Tovuti ya Kitaaluma',
+        'Programu ya Wavuti ya Kipekee',
+        'Ukusanyaji wa Takwimu za Simu (ODK/Kobo)',
+        'Mtandao & Miundombinu',
+        'Usaidizi & Matunzo ya IT',
+        'Mafunzo ya Kidijitali',
+        'Nyingine'
+      ],
+      budget: 'Bajeti Iliyokadiriwa',
+      budgetPlaceholder: 'Chagua kiwango',
+      budgets: [
+        'Chini ya $500',
+        '$500 – $1,500',
+        '$1,500 – $5,000',
+        'Zaidi ya $5,000',
+        'Sijaamua bado'
+      ],
+      timeline: 'Muda Unaohitajika',
+      timelinePlaceholder: 'Chagua muda',
+      timelines: [
+        'Haraka iwezekanavyo',
+        'Ndani ya mwezi 1',
+        'Mwezi 1 hadi 3',
+        'Nyenyekevu'
+      ],
+      responseNote: 'Jibu la uhakika ndani ya masaa 24'
     },
     projects: {
       title: 'Miradi ya Hivi Karibuni',
