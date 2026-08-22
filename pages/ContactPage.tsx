@@ -6,22 +6,38 @@ const ContactPage: React.FC = () => {
   const { t } = useTranslation();
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
-    fetch('/', {
-      method: 'POST',
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams({
-        'form-name': 'contact',
-        name: formData.name,
-        email: formData.email,
-        message: formData.message
-      }).toString()
-    })
-    .then(() => setSubmitted(true))
-    .catch((error) => console.error('Form submission error:', error));
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    data.append("access_key", "228cc209-992c-418c-a368-db7620320394");
+
+    setSending(true);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: data
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setSubmitted(true);
+        form.reset();
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        alert(result.message || "Error");
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert("Something went wrong. Please try again.");
+    } finally {
+      setSending(false);
+    }
   };
 
   const contactInfo = [
@@ -128,19 +144,10 @@ const ContactPage: React.FC = () => {
                   </div>
                 ) : (
                   <form 
-                    name="contact" 
-                    method="POST" 
-                    data-netlify="true" 
-                    data-netlify-honeypot="bot-field"
                     onSubmit={handleSubmit}
                     className="space-y-6"
                   >
-                    <input type="hidden" name="form-name" value="contact" />
-                    <p hidden>
-                      <label>
-                        Don't fill this out: <input name="bot-field" onChange={(e) => setFormData({...formData, [e.target.name]: e.target.value})} />
-                      </label>
-                    </p>
+                    <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
@@ -190,10 +197,11 @@ const ContactPage: React.FC = () => {
 
                     <button 
                       type="submit"
-                      className="w-full inline-flex items-center justify-center gap-3 px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors"
+                      disabled={sending}
+                      className="w-full inline-flex items-center justify-center gap-3 px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
                     >
                       <Send size={18} />
-                      {t.contact.form.send}
+                      {sending ? "Sending..." : t.contact.form.send}
                     </button>
                   </form>
                 )}
